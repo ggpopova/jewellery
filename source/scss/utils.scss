@@ -1,0 +1,33 @@
+//Global
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  overflow-wrap: anywhere;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $basic-background;
+  color: $basic-color;
+  font-family: $font-poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: $basic-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

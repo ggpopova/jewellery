@@ -1,0 +1,123 @@
+.faq {
+  margin-bottom: 109px;
+}
+
+.faq h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 48px;
+  font-family: $font-cormorant;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+}
+
+.faq__list {
+  display: grid;
+  grid-template-rows: max-content;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.faq__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  min-width: 970px;
+  max-width: 970px;
+
+  margin: 0 auto;
+  padding: 43px;
+  outline: 1px solid $light-gray-red;
+
+  @media (max-width: $tablet) {
+    min-width: 290px;
+    padding: 22px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 38px;
+  }
+}
+
+.faq__item--country {
+  padding-bottom: 37px;
+}
+
+.faq__item--payment,
+.faq__item--return {
+  padding-bottom: 36px;
+}
+
+.faq__item summary,
+.faq__item p {
+  margin: 0;
+  line-height: 130%;
+
+  @media (max-width: $mobile) {
+    line-height: 140%;
+  }
+}
+
+.faq__item summary {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 14px;
+    top: 7px;
+    right: 8px;
+    padding: 5px;
+    background-image: url("../img/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] > summary {
+  // min-height: 180px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 14px;
+    top: 7px;
+    right: 8px;
+    padding: 5px;
+    background-image: url("../img/icon-arrow-top.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.faq__item p {
+  // display: none;
+  padding-right: 356px;
+  padding-left: 7px;
+  font-weight: normal;
+  font-size: 16px;
+
+  @media (max-width: $tablet) {
+    padding-right: 56px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}

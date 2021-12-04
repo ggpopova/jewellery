@@ -1,0 +1,18 @@
+button {
+  width: 74.3%;
+  padding: 30px 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic-white;
+  background-color: $grayish-pink;
+  border: 1px solid $grayish-pink;
+  border-radius: 40px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
