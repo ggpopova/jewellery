@@ -18,86 +18,84 @@
 
 <body>
 
-  <header class="header-main">
-      <section class="header-main__wrapper">
-        <h2 class="visually-hidden">Jewellery</h2>
-        <nav class="menu-nav menu-nav--closed menu-nav-nojs container">
-          <div class="menu-nav__wrapper">
-            <ul class="menu-nav__menu">
-              <li class="menu-nav__item menu-nav__item--block-1  menu-nav__item--bg">
-                <form action="https://echo.htmlacademy.ru" method="GET">
-                  <button type="submit">
-                    <svg width="14" height="14" viewBox="0 0 14 14" role="img" aria-label="" fill= "white">
-                      <use xlink:href="img/sprite.svg#icon-magnifier"/>
-                    </svg>
-                  </button>
-                  <input name="s" placeholder="" type="search">
-                </form>
+  <div class="body-wrapper">
+    <div class="header-cover">
+      <header class="header header--menu">
+        <div class="container">
+          <div class="header__wrapper">
+            <button class="header__btn burger-btn" type="button" aria-label="menu button">
+            </button>
+            <form class="header__search search-form search-form--menu" action="#" method="post">
+              <label for="usersearch">
+                <svg class="search-form__icon" width="14" height="14" role="img">
+                  <use xlink:href="img/sprite.svg#icon-magnifier"></use>
+                </svg>
+              </label>
+              <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search">
+            </form>
+            <a class="header__logo logo logo--menu" href="index.html">
+              <svg width="66" height="66" role="img">
+                <use xlink:href="img/sprite.svg#icon-logo"></use>
+              </svg>
+            </a>
+            <div class="header__link-wrapper user-link">
+              <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
+              <a class="user-link__item cart-link cart-link--menu" href="#" aria-label="cart link">
+                <div>
+                  Cart&nbsp;
+                  <span class="cart-link__counter">0</span>
+                </div>
+                <svg width="20" height="18" role="img">
+                  <use xlink:href="img/sprite.svg#icon-email"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <nav class="header__navbar navbar navbar--menu">
+            <form class="header__search search-form search-form--menu" action="#" method="post">
+              <label for="usersearch">
+                <svg class="search-form__icon" width="14" height="14" role="img">
+                  <use xlink:href="img/sprite.svg#icon-magnifier"></use>
+                </svg>
+              </label>
+              <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search">
+            </form>
+            <ul class="navbar__list nav-list">
+              <li class="nav-list__item">
+                <a href="#new">What’s new</a>
               </li>
-              <li class="menu-nav__item menu-nav__item--block-1">
-                <a class="menu-nav__link menu-nav__link--current menu-nav__link--active">What’s new</a>
-              </li>
-              <li class="menu-nav__item menu-nav__item--block-1">
+              <li class="nav-list__item">
                 <a href="catalog.html">Chokers</a>
               </li>
-              <li class="menu-nav__item menu-nav__item--block-1">
+              <li class="nav-list__item">
                 <a href="catalog.html">Necklaces</a>
               </li>
-              <li class="menu-nav__item menu-nav__item--block-1">
+              <li class="nav-list__item">
                 <a href="catalog.html">Rings</a>
               </li>
-              <li class="menu-nav__item menu-nav__item--block-1">
+              <li class="nav-list__item">
                 <a href="catalog.html">Earrings</a>
               </li>
             </ul>
-            <ul class="menu-nav__menu menu-nav__menu--tab">
-              <li class="menu-nav__item menu-nav__item--block-2">
+            <ul class="navbar__list expanded-nav-list">
+              <li class="expanded-nav-list__item">
                 <a href="#">About CH</a>
               </li>
-              <li class="menu-nav__item menu-nav__item--block-2">
-                <a  href="#">Stores & Hours</a>
+              <li class="expanded-nav-list__item">
+                <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
               </li>
-              <li class="menu-nav__item menu-nav__item--block-2">
+              <li class="expanded-nav-list__item">
                 <a href="#">Contact Us</a>
               </li>
-              <li class="menu-nav__item menu-nav__item--block-2 menu-nav__item--block-2-fons">
-                <a href="#" aria-label="Логин">Login</a>
+              <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
+                <a href="login.html" target="_blank" aria-label="login form link">Login</a>
               </li>
             </ul>
-          </div>
-        </nav>
-        <div class="header-menu container">
-          <button class="header-main__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
-          </button>
-          <form action="https://echo.htmlacademy.ru" method="GET">
-            <button type="submit">
-              <svg width="14" height="14" viewBox="0 0 14 14" role="img" aria-label="">
-                <use xlink:href="img/sprite.svg#icon-magnifier"/>
-              </svg>
-            </button>
-            <input name="s" placeholder="Type here to search" type="search">
-          </form>
-          <a href="#" aria-label="Логотип ювелирного магазина Jewellery">
-            <svg width="66" height="66" viewBox="0 0 66 66" role="img" aria-label="">
-              <use xlink:href="img/sprite.svg#icon-logo"/>
-            </svg>
-          </a>
-          <ul class="header-menu__user">
-            <li class="header-menu__login">
-              <a class="" href="#" aria-label="Логин">Login</a>
-            </li>
-            <li class="header-menu__cart">
-              <a class="" href="#" aria-label="Корзина">Cart<span>0</span></a>
-            </li>
-          </ul>
-          <a class="header-menu__email" href="#" aria-label="Почта">
-            <svg width="20" height="18" viewBox="0 0 20 18" role="img" aria-label="">
-              <use xlink:href="img/sprite.svg#icon-email"/>
-            </svg>
-          </a>
+          </nav>
         </div>
-      </section>
-  </header>
+      </header>
+    </div>
+  </div>
 
   <main>
     <section class="promo container">
@@ -490,5 +488,6 @@
       </div>
     </section>
   </footer>
+  <script src="js/script.min.js"></script>
 </body>
 </html>

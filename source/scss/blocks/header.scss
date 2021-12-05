@@ -1,0 +1,251 @@
+.header {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 114px;
+    width: 100%;
+    border-bottom: 1px solid $smoky-white;
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+
+    @media (max-width: $tablet) {
+      &::after {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.header--opened .header {
+  @media (max-width: $tablet) {
+    display: block;
+    background-color: $light-gray-red;
+  }
+}
+
+.header__wrapper {
+  // display: flex;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  @media (max-width: $desktop) {
+    padding-bottom: 26px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 17px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 21px;
+  }
+}
+
+.header--opened .header__wrapper {
+  @media (max-width: $tablet) {
+    margin-bottom: 25px;
+  }
+}
+
+
+.header__link-wrapper {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-wrap: wrap;
+  min-width: 118px;
+
+  // margin: -25px 0 0 433px;
+  margin-top: -25px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  list-style-type: none;
+
+  @media (max-width: $desktop) {
+    width: auto;
+    margin-top: 0;
+    // margin: 0 0 0 200px;
+  }
+
+  @media (max-width: $tablet) {
+    // max-width: 118px;
+    margin-left: 0;
+  }
+}
+
+.cart-link {
+  margin-left: 20px;
+
+  @media (max-width: $tablet) {
+    margin-left: 0;
+  }
+}
+
+.cart-link--menu svg {
+  display: none;
+  color: $basic-background;
+  stroke: $basic-color;
+
+  @media (max-width: $tablet) {
+    display: block;
+    // margin-left: 285px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-left: 0;
+  }
+}
+
+.header--opened .cart-link--menu svg {
+  @media (max-width: $tablet) {
+    color: transparent;
+    stroke: $basic-background;
+  }
+}
+
+.login-link,
+.cart-link div {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.header__wrapper--page {
+  justify-content: center;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo svg {
+  @media (max-width: $mobile) {
+    height: 52px;
+  }
+}
+
+.header--opened .logo svg {
+  @media (max-width: $tablet) {
+    color: white;
+  }
+}
+
+.header__search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: auto;
+  margin-bottom: 19px;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.header__search input {
+  min-width: 120px;
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  color: $gray-crayola;
+}
+
+.header__navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: baseline;
+  min-width: 651px;
+  list-style: none;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.header--opened .header__navbar {
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    min-width: 651px;
+    margin: 0;
+    padding-bottom: 55px;
+    list-style: none;
+  }
+}
+
+.header__navbar .search-form {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    padding-left: 0;
+    margin-bottom: 41px;
+    border: none;
+    outline: none;
+    background-color: $grayish-purplish-red;
+    opacity: 0.15;
+    border-radius: 21px;
+  }
+}
+
+.header__navbar .search-form svg {
+  @media (max-width: $tablet) {
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    margin: 12px;
+    color: $basic-background;
+  }
+}
+
+.header__navbar .search-form a {
+  fill: $light-gray-red;
+
+  @media (max-width: $tablet) {
+    fill: $basic-background;
+  }
+}
+
+.header__navbar .search-form input {
+  @media (max-width: $tablet) {
+    width: 87%;
+    background-color: transparent;
+    border-radius: 21px;
+    color: $basic-background;
+  }
+}
+
+.nav-list__item,
+.expanded-nav-list__item {
+  @media (max-width: $tablet) {
+    margin-bottom: 21px;
+  }
+}
