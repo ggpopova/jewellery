@@ -1,29 +1,50 @@
 .promo {
+  position: relative;
   min-height: 463px;
-  margin-bottom: 119px;
+  // width: auto;
+  min-width: 1023px;
+  margin: 0 auto 119px;
+  padding: 0;
   background-image: url("../img/promo-main@1x.jpg");
   background-repeat: no-repeat;
-  background-color: $brownish-gray;
-  opacity: 0.7;
+  background-size: cover;
+  z-index: -1;
 
   @media (min-resolution: 2dppx) {
     background-image: url(".../img/promo-main@2x.jpg");
   }
 
-  @media (max-width: $tablet) {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: $brownish-gray;
+    z-index: -1;
+  }
+
+  @media (max-width: $desktop) {
+    min-width: 768px;
+    margin-bottom: 69px;
     background-image: url("../img/promo-main-tab@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url(".../img/promo-main-tab@2x.jpg");
+      background-image: url("../img/promo-main-tab@2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet) {
+    min-width: 320px;
+    background-image: url("../img/promo-main-mob@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-main-mob@2x.jpg");
     }
   }
 
   @media (max-width: $mobile) {
-    background-image: url("../img/promo-main-mob@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url(".../img/promo-main-mob@2x.jpg");
-    }
+    margin-bottom: 59px;
   }
 }
 
@@ -32,10 +53,15 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
   font-family: $font-cormorant;
   text-align: center;
-  // line-height: 130%;
   color: $basic-background;
+
+  @media (max-width: $desktop) {
+    padding-left: 21px;
+  }
 }
 
 .promo h2 {
@@ -45,6 +71,10 @@
   letter-spacing: 0.03em;
 
   @media (max-width: $mobile) {
+    margin-bottom: -2px;
+    padding-top: 191px;
+    padding-left: 38px;
+    padding-right: 37px;
     font-size: 38px;
   }
 }
@@ -55,6 +85,7 @@
   font-size: 38px;
 
   @media (max-width: $mobile) {
+    padding-right: 22px;
     font-size: 34px;
   }
 }

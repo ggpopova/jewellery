@@ -1,4 +1,3 @@
-
 .navbar__list {
   display: flex;
   flex-direction: row;
@@ -17,6 +16,10 @@
     margin: 0 0 19px;
     padding: 0;
   }
+}
+
+.header--opened .navbar__list {
+  width: auto;
 }
 
 .nav-list__item a {

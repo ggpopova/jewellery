@@ -1,6 +1,10 @@
 .footer {
   background-color: $background-black;
   color: $basic-background;
+
+  // @media (max-width: $tablet) {
+
+  // }
 }
 
 .footer-form {
@@ -12,39 +16,74 @@
   padding-left: 96px;
   padding-right: 94px;
 
-  @media (max-width: $tablet) {
-    grid-template-columns: 550px;
+
+  @media (max-width: $desktop-max) {
+    grid-template-columns: 500px auto;
+    column-gap: 23px;
+    padding-left: 26px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: $desktop) {
+    grid-template-columns: 560px;
     grid-template-rows: 1fr auto;
     row-gap: 53px;
     padding: 60px 45px;
   }
 
-  @media (max-width: $mobile) {
-    grid-template-columns: 290px;
+  @media (max-width: $tablet) {
     row-gap: 50px;
+    padding: 48px 0 56px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
-.footer-menu__block {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 62px;
-  padding-top: 7px;
-
-  @media (max-width: $tablet) {
-    gap: 22px;
-    padding-top: 0;
-  }
-
+.footer-form__block {
   @media (max-width: $mobile) {
-    grid-template-columns: 1fr;
-    row-gap: 50px;
+    max-width: 290px;
   }
 }
 
 .footer-form__block h2,
 .footer-form__block p {
   margin: 0 auto;
+  margin-left: 0;
+
+  @media (max-width: $desktop) {
+    min-width: 413px;
+    max-width: 230px;
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 230px;
+  }
+
+  @media (max-width: $mobile) {
+    min-width: 230px;
+  }
+}
+
+.footer-form__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  max-width: 500px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid $basic-background;
+
+  @media (max-width: $desktop) {
+    max-width: 560px;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 290px;
+    padding-bottom: 5px;
+  }
 }
 
 .footer-form__block h2 {
@@ -54,6 +93,10 @@
   font-size: 34px;
   line-height: 130%;
   letter-spacing: 0.03em;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 15px;
+  }
 }
 
 .footer-form__block p {
@@ -64,27 +107,78 @@
   color: $gray-crayola;
 }
 
-.footer-form__form {
-  padding-bottom: 4px;
-  border-bottom: 1px solid $basic-background;
-}
-
 .footer-form__form input {
-  width: 80%;
+  width: 69%;
+  padding: 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: $basic-background;
   background-color: $background-black;
   border: $background-black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .footer-form__form button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 113px;
+  padding: 0;
+  padding-left: 10px;
   background-color: $background-black;
-  color: $basic-background;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
+  border: none;
+  color: $basic-background;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 172px;
+  }
+}
+
+.footer-form__form button svg {
+  margin-left: 12px;
+}
+
+.footer-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 62px;
+  padding-top: 7px;
+
+  @media (max-width: $desktop-max) {
+    gap: 10px;
+  }
+
+  @media (max-width: $desktop) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 180px 150px 130px;
+    gap: 66px;
+    padding: 0;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    max-width: 290px;
+    gap: 40px;
+  }
 }
 
 .footer-menu__list {
@@ -93,6 +187,10 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  // @media (max-width: $tablet) {
+  //   row-gap: 14px;
+  // }
 }
 
 .footer-menu__item a,
@@ -104,18 +202,34 @@
   line-height: 130%;
   list-style-type: none;
   color: $basic-background;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .footer-menu__item--social svg {
   margin-right: 15px;
+
+  @media (max-width: $mobile) {
+    height: 21px;
+    width: auto;
+    margin-right: 30px;
+  }
 }
 
 .footer-menu__list--social {
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 9px;
   }
 }
 

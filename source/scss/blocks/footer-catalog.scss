@@ -1,0 +1,15 @@
+.footer-catalog {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -130px;
+    width: 100%;
+    outline: 1px solid $smoky-white;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
