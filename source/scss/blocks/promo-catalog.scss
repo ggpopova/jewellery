@@ -1,6 +1,6 @@
-.promo__catalog {
+.promo--catalog {
   position: relative;
-  min-height: 463px;
+  min-height: 261px;
   min-width: 1023px;
   margin: 0 auto 80px;
   padding: 0;
@@ -25,7 +25,7 @@
 
   @media (max-width: $desktop) {
     min-width: 768px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     background-image: url("../img/promo-catalog-tab@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -35,7 +35,7 @@
 
   @media (max-width: $tablet) {
     min-width: 320px;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
     background-image: url("../img/promo-catalog-mob@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -44,24 +44,20 @@
   }
 }
 
-.promo__catalog h2,
-.promo__catalog p {
-  padding-left: 14px;
+.promo--catalog h2,
+.promo--catalog p {
+  padding-left: 24px;
   padding-right: 14px;
 }
 
-.promo__catalog h2 {
-  padding-top: 184px;
+.promo--catalog h2 {
+  margin-bottom: 4px;
+  padding-top: 82px;
   font-weight: bold;
   font-size: 34px;
-  letter-spacing: 0.03em;
-
-  @media (max-width: $mobile) {
-    font-size: 38px;
-  }
 }
 
-.promo__catalog p {
+.promo--catalog p {
   font-style: italic;
   font-weight: 500;
   font-size: 22px;

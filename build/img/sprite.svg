@@ -6,6 +6,8 @@
 <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10" stroke="#A87B62"/>
 </symbol><symbol id="icon-arrow-top" viewBox="0 0 17 10">
 <path d="M16 9L8.5 1L1 9" stroke="#A87B62"/>
+</symbol><symbol id="icon-close" viewBox="0 0 14 14">
+<path d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" fill="white"/>
 </symbol><symbol id="icon-email-arrow" viewBox="0 0 30 11">
 <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10" stroke="white"/>
 </symbol><symbol id="icon-email" viewBox="0 0 20 18">

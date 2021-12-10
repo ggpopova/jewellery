@@ -1,16 +1,16 @@
 .blog {
   margin-bottom: 119px;
 
-  @media (max-width: $desktop) {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  // @media (max-width: $desktop) {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     margin-bottom: 69px;
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     margin-bottom: 59px;
   }
 }
@@ -39,13 +39,13 @@
 
 .blog__shop {
   width: fit-content;
-  margin: 0 auto 60px;
+  margin: 0 auto 61px;
   padding-bottom: 4px;
   font-weight: 500;
   font-size: 16px;
   border-bottom: 1px solid $light-gray-red;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     margin-bottom: 51px;
   }
 }
@@ -60,10 +60,8 @@
     gap: 50px;
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     gap: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -82,15 +80,11 @@
   grid-template-rows: repeat(2, 1fr);
 
   @media (max-width: $desktop) {
-    grid-template-rows: auto;
-  }
-
-  @media (max-width: $tablet) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 300px;
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     grid-template-columns: 1fr;
     grid-template-rows: 256px 256px;
   }
@@ -99,11 +93,11 @@
 .blog__block--gap {
   gap: 30px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     gap: 50px;
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     gap: 40px;
   }
 }
@@ -113,7 +107,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 300px;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     grid-template-columns: 1fr;
     grid-template-rows: 256px 256px;
   }
@@ -126,7 +120,7 @@
 }
 
 .blog__item--flow .blog__text-wrapper {
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     grid-row: 2;
   }
 }
@@ -148,13 +142,13 @@
   z-index: 2;
   margin-top: 15px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     grid-row: 1 / span 1;
     grid-column: 2 / span 2;
     margin-top: 0;
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     grid-column: 1/span 1;
     grid-row: 2/span 2;
   }
@@ -176,7 +170,7 @@
 .blog__block--list .blog__text-wrapper p {
   margin-top: -38px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     margin-top: 0;
   }
 }

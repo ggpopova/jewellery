@@ -10,7 +10,7 @@
   padding-left: 12px;
   list-style-type: none;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     flex-direction: column;
     align-items: baseline;
     margin: 0 0 19px;
@@ -23,7 +23,7 @@
 }
 
 .nav-list__item a {
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
@@ -34,7 +34,7 @@
 .expanded-nav-list {
   display: none;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -48,7 +48,7 @@
 
 .expanded-nav-list a,
 .expanded-nav-list__item--login a {
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     font-weight: 500;
     font-size: 18px;
     line-height: 130%;
@@ -57,13 +57,13 @@
 }
 
 .expanded-nav-list a {
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     opacity: 0.75;
   }
 }
 
 .expanded-nav-list__item--login {
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     margin-top: 21px;
   }
 }

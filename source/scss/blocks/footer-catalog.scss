@@ -1,5 +1,6 @@
 .footer-catalog {
   position: relative;
+  padding-bottom: 58px;
 
   &::after {
     content: "";
@@ -9,7 +10,11 @@
     outline: 1px solid $smoky-white;
   }
 
-  @media (max-width: $mobile) {
-    display: none;
+  @media (max-width: $tablet) {
+    padding-bottom: 57px;
+
+    &::after {
+      display: none;
+    }
   }
 }

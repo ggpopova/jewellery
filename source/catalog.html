@@ -20,430 +20,439 @@
   <body>
     <div class="body-wrapper">
       <div class="header-cover">
-        <header class="header header--menu">
-          <div class="container">
-            <div class="header__wrapper">
-              <button class="header__btn burger-btn" type="button" aria-label="menu button">
-              </button>
-              <form class="header__search search-form search-form--menu" action="#" method="post">
-                <label for="usersearch">
-                  <svg class="search-form__icon" width="14" height="14" role="img">
-                    <use xlink:href="img/sprite.svg#icon-magnifier"></use>
-                  </svg>
-                </label>
-                <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search">
-              </form>
-              <a class="header__logo logo logo--menu" href="index.html">
-                <svg width="66" height="66" role="img">
-                  <use xlink:href="img/sprite.svg#icon-logo"></use>
+        <header class="header header--menu container">
+          <div class="header__wrapper">
+            <button class="header__btn burger-btn" type="button" aria-label="menu button">
+            </button>
+            <form class="header__search search-form search-form--menu" action="#" method="post">
+              <label for="usersearch">
+                <svg class="search-form__icon" width="14" height="14" role="img">
+                  <use xlink:href="img/sprite.svg#icon-magnifier"></use>
+                </svg>
+              </label>
+              <input type="search" name="search" id="usersearch" placeholder="Type here to search">
+            </form>
+            <a class="header__logo logo logo--menu" href="index.html">
+              <svg width="66" height="66" role="img">
+                <use xlink:href="img/sprite.svg#icon-logo"></use>
+              </svg>
+            </a>
+            <div class="header__link-wrapper user-link">
+              <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
+              <a class="user-link__item cart-link cart-link--menu" href="#" aria-label="cart link">
+                <div>
+                  Cart&nbsp;
+                  <span class="cart-link__counter">0</span>
+                </div>
+                <svg width="20" height="18" role="img">
+                  <use xlink:href="img/sprite.svg#icon-email"></use>
                 </svg>
               </a>
-              <div class="header__link-wrapper user-link">
-                <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
-                <a class="user-link__item cart-link cart-link--menu" href="#" aria-label="cart link">
-                  <div>
-                    Cart&nbsp;
-                    <span class="cart-link__counter">0</span>
-                  </div>
-                  <svg width="20" height="18" role="img">
-                    <use xlink:href="img/sprite.svg#icon-email"></use>
-                  </svg>
-                </a>
-              </div>
             </div>
-            <nav class="header__navbar navbar navbar--menu">
-              <form class="header__search search-form search-form--menu" action="#" method="post">
-                <label for="usersearch">
-                  <svg class="search-form__icon" width="14" height="14" role="img">
-                    <use xlink:href="img/sprite.svg#icon-magnifier"></use>
-                  </svg>
-                </label>
-                <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search">
-              </form>
-              <ul class="navbar__list nav-list">
-                <li class="nav-list__item">
-                  <a href="#new">What’s new</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="catalog.html">Chokers</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="catalog.html">Necklaces</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="catalog.html">Rings</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="catalog.html">Earrings</a>
-                </li>
-              </ul>
-              <ul class="navbar__list expanded-nav-list">
-                <li class="expanded-nav-list__item">
-                  <a href="#">About CH</a>
-                </li>
-                <li class="expanded-nav-list__item">
-                  <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
-                </li>
-                <li class="expanded-nav-list__item">
-                  <a href="#">Contact Us</a>
-                </li>
-                <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
-                  <a href="login.html" target="_blank" aria-label="login form link">Login</a>
-                </li>
-              </ul>
-            </nav>
           </div>
+          <nav class="header__navbar navbar navbar--menu">
+            <form class="header__search search-form search-form--menu" action="#" method="post">
+              <label for="mysearch">
+                <svg class="search-form__icon" width="14" height="14" role="img">
+                  <use xlink:href="img/sprite.svg#icon-magnifier"></use>
+                </svg>
+              </label>
+              <input type="search" name="search" id="mysearch" placeholder="Type here to search">
+            </form>
+            <ul class="navbar__list nav-list">
+              <li class="nav-list__item">
+                <a href="#new">What’s new</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="catalog.html">Chokers</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="catalog.html">Necklaces</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="catalog.html">Rings</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="catalog.html">Earrings</a>
+              </li>
+            </ul>
+            <ul class="navbar__list expanded-nav-list">
+              <li class="expanded-nav-list__item">
+                <a href="catalog.html">About CH</a>
+              </li>
+              <li class="expanded-nav-list__item">
+                <a href="catalog.html">Stores&nbsp;&#38;&nbsp;Hours</a>
+              </li>
+              <li class="expanded-nav-list__item">
+                <a href="catalog.html">Contact Us</a>
+              </li>
+              <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
+                <a href="login.html" target="_blank" aria-label="login form link">Login</a>
+              </li>
+            </ul>
+          </nav>
         </header>
       </div>
     </div>
-    <main>
-      <section class="promo promo__catalog">
+
+    <main class="page-main">
+      <section class="promo promo--catalog">
         <h2>ALL JEWELLERY</h2>
       <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
     </section>
+    <div class="filter-btn container">
+      <button class="filter-btn__open" type="button" aria-label="Filter button">Filter</button>
+    </div>
 
-    <section class="catalog container">
-      <div class="filter">
-        <button class="filter__close" type="button" aria-label="Filter button">Filter</button>
-          <div class="filter__block">
-            <details class="filter__wrapper" open>
-              <summary>Product</summary>
-                <ul class="filter__list">
-                  <li class="filter__item">
-                    <input class="filter-checkbox-input" name="product-1" type="checkbox" id="product-1" checked>
-                    <label class="filter-checkbox-label" for="product-1">Necklaces</label>
-                  </li>
-                  <li class="filter__item">
-                    <input class="filter-checkbox-input" name="product-2" type="checkbox" id="product-2">
-                    <label class="filter-checkbox-label" for="product-2">Chokers</label>
-                  </li>
-                  <li class="filter__item">
-                    <input class="filter-checkbox-input" name="product-3" type="checkbox" id="product-3" checked>
-                    <label class="filter-checkbox-label" for="product-3">Rings</label>
-                  </li>
-                  <li class="filter__item">
-                    <input class="filter-checkbox-input" name="product-5" type="checkbox" id="product-5">
-                    <label class="filter-checkbox-label" for="product-5">Earrings</label>
-                  </li>
-                </ul>
-            </details>
-
-            <details class="filter__wrapper">
-              <summary>Material</summary>
-              <ul class="filter__list">
-                <li class="filter__item">
-                  <input class="filter-checkbox-input" name="material-1" type="checkbox" id="material-1" checked>
-                  <label class="filter-checkbox-label" for="material-1">Gold</label>
-                </li>
-                <li class="filter__item">
-                  <input class="filter-checkbox-input" name="material-2" type="checkbox" id="material-2">
-                  <label class="filter-checkbox-label" for="material-2">Silver</label>
-                </li>
-              </ul>
-            </details>
-
-            <details class="filter__wrapper">
-              <summary>Collection</summary>
-              <ul class="filter__list">
-                <li class="filter__item">
-                  <input class="filter-checkbox-input" name="collection-1" type="checkbox" id="collection-1" checked>
-                  <label class="filter-checkbox-label" for="collection-1">Pink flamingo</label>
-                </li>
-                <li class="filter__item">
-                  <input class="filter-checkbox-input" name="collection-2" type="checkbox" id="collection-2">
-                  <label class="filter-checkbox-label" for="collection-2">Dreams</label>
-                </li>
-              </ul>
-            </details>
-            <details class="filter__wrapper" open>
-              <summary>Price</summary>
-              <div class="range-filter">
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar"></div>
-                  </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
-                </div>
-                <div class="price-controls">
-                  <label class="min-price">
-                    <input type="text" name="min-price" value="&#36; 55">
-                  </label>
-                  <label class="max-price">
-                    <input type="text" name="max-price" value="&#36; 155">
-                  </label>
-                </div>
-              </div>
-            </details>
-            <div class="filter__btn">
-              <button class="filter__close filter__close--apply" type="button" aria-label="Filter button">Apply</button>
-              <button class="filter__close filter__close--clear" type="button" aria-label="Filter button">Clear All</button>
-            </div>
-          </div>
-      </div>
-      <div class="product">
-        <div class="product__block">
-          <ul class="product__list">
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/double-pearl-earrings@1x.webp 1x, img/double-pearl-earrings@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/double-pearl-earrings-tab@1x.webp 1x, img/double-pearl-earrings-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/double-pearl-earrings-mob@1x.webp 1x, img/double-pearl-earrings-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/double-pearl-earrings@1x.jpg 1x, img/double-pearl-earrings@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/double-pearl-earrings-tab@1x.jpg 1x, img/double-pearl-earrings-tab@2x.jpg 2x">
-                  <img src="img/double-pearl-earrings@1x.jpg" srcset="img/double-pearl-earrings@2x.jpg 2x" alt="Двойные жемчужные серьги">
-                </picture>
-                <h3>Double pearl earrings</h3>
-                <p>&#36; 115</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/black-choker-gold-bead@1x.webp 1x, img/black-choker-gold-bead@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/black-choker-gold-bead-tab@1x.webp 1x, img/black-choker-gold-bead-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/black-choker-gold-bead-mob@1x.webp 1x, img/black-choker-gold-bead-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/black-choker-gold-bead@1x.jpg 1x, img/black-choker-gold-bead@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/black-choker-gold-bead-tab@1x.jpg 1x, img/black-choker-gold-bead-tab@2x.jpg 2x">
-                  <img class="#" src="img/black-choker-gold-bead@1x.jpg" srcset="img/black-choker-gold-bead@2x.jpg 2x" alt="Многослойное колье">
-                </picture>
-                <h3>Choker with gold bead</h3>
-                <p>&#36; 55</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/gold-layered-necklace@1x.webp 1x, img/gold-layered-necklace@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/gold-layered-necklace-tab@1x.webp 1x, img/gold-layered-necklace-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/gold-layered-necklace-mob@1x.webp 1x, img/gold-layered-necklace-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/gold-layered-necklace@1x.jpg 1x, img/gold-layered-necklace@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/gold-layered-necklace-tab@1x.jpg 1x, img/gold-layered-necklace-tab@2x.jpg 2x">
-                  <img src="img/gold-layered-necklace@1x.jpg" srcset="img/gold-layered-necklace@2x.jpg 2x" alt="Ожерелье с пурпурным драгоценным камнем">
-                </picture>
-                <h3>Gold layered necklace</h3>
-                <p>&#36; 155</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/blue-gemstone-pendant@1x.webp 1x, img/blue-gemstone-pendant@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/blue-gemstone-pendant-tab@1x.webp 1x, img/blue-gemstone-pendant-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/blue-gemstone-pendant-mob@1x.webp 1x, img/blue-gemstone-pendant-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/blue-gemstone-pendant@1x.jpg 1x, img/blue-gemstone-pendant@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/blue-gemstone-pendant-tab@1x.jpg 1x, img/blue-gemstone-pendant-tab@2x.jpg 2x">
-                  <img src="img/blue-gemstone-pendant@1x.jpg" srcset="img/blue-gemstone-pendant@2x.jpg 2x" alt="Ожерелье с пурпурным драгоценным камнем">
-                </picture>
-                <h3>Blue gemstone pendant</h3>
-                <p>&#36; 105</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/boho-earrings@1x.webp 1x, img/boho-earrings@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/boho-earrings-tab@1x.webp 1x, img/boho-earrings-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/boho-earrings-mob@1x.webp 1x, img/boho-earrings-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/boho-earrings@1x.jpg 1x, img/boho-earrings@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/boho-earrings-tab@1x.jpg 1x, img/boho-earrings-tab@2x.jpg 2x">
-                  <img src="img/boho-earrings@1x.jpg" srcset="img/boho-earrings@2x.jpg 2x" alt="Ожерелье с пурпурным драгоценным камнем">
-                </picture>
-                <h3>Boho earrings</h3>
-                <p>&#36; 75</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/bird-necklace@1x.webp 1x, img/bird-necklace@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/bird-necklace-tab@1x.webp 1x, img/bird-necklace-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/bird-necklace-mob@1x.webp 1x, img/bird-necklace-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/bird-necklace@1x.jpg 1x, img/bird-necklace@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/bird-necklace-tab@1x.jpg 1x, img/bird-necklace-tab@2x.jpg 2x">
-                  <img src="img/bird-necklace@1x.jpg" srcset="img/bird-necklace@2x.jpg 2x" alt="Ожерелье с пурпурным драгоценным камнем">
-                </picture>
-                <h3>Gold bird necklace</h3>
-                <p>&#36; 135</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/black-leather-choker-necklace@1x.webp 1x, img/black-leather-choker-necklace@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/black-leather-choker-necklace-tab@1x.webp 1x, img/black-leather-choker-necklace-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/black-leather-choker-necklace-mob@1x.webp 1x, img/black-leather-choker-necklace-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/black-leather-choker-necklace@1x.jpg 1x, img/black-leather-choker-necklace@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/black-leather-choker-necklace-tab@1x.jpg 1x, img/black-leather-choker-necklace-tab@2x.jpg 2x">
-                  <img src="img/black-leather-choker-necklace@1x.jpg" srcset="img/black-leather-choker-necklace@2x.jpg 2x" alt="Ожерелье с пурпурным драгоценным камнем">
-                </picture>
-                <h3>Black leather choker</h3>
-                <p>&#36; 85</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace@1x.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/purple-gemstone-necklace-tab@1x.webp 1x, img/purple-gemstone-necklace-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/purple-gemstone-necklace-mob@1x.webp 1x, img/purple-gemstone-necklace-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace@1x.jpg 1x, img/purple-gemstone-necklace@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/purple-gemstone-necklace-tab@1x.jpg 1x, img/purple-gemstone-necklace-tab@2x.jpg 2x">
-                  <img src="img/purple-gemstone-necklace@1x.jpg" srcset="img/purple-gemstone-necklace@2x.jpg 2x" alt="Ожерелье с пурпурным драгоценным камнем">
-                </picture>
-                <h3>Necklace with amethyst</h3>
-                <p>&#36; 145</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/elephant-earrings@1x.webp 1x, img/elephant-earrings@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/elephant-earrings-tab@1x.webp 1x, img/elephant-earrings-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/elephant-earrings-mob@1x.webp 1x, img/elephant-earrings-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/elephant-earrings@1x.jpg 1x, img/elephant-earrings@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/elephant-earrings-tab@1x.jpg 1x, img/elephant-earrings-tab@2x.jpg 2x">
-                  <img class="#" src="img/elephant-earrings@1x.jpg" srcset="img/elephant-earrings@2x.jpg 2x" alt="Многослойное колье">
-                </picture>
-                <h3>Elephant earrings</h3>
-                <p>&#36; 95</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/threader-necklace-closeup@1x.webp 1x, img/threader-necklace-closeup@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/threader-necklace-closeup-tab@1x.webp 1x, img/threader-necklace-closeup-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/threader-necklace-closeup-mob@1x.webp 1x, img/threader-necklace-closeup-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/threader-necklace-closeup@1x.jpg 1x, img/threader-necklace-closeup@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/threader-necklace-closeup-tab@1x.jpg 1x, img/threader-necklace-closeup-tab@2x.jpg 2x">
-                  <img class="#" src="img/threader-necklace-closeup@1x.jpg" srcset="img/threader-necklace-closeup@2x.jpg 2x" alt="Многослойное колье">
-                </picture>
-                <h3>Threader necklace</h3>
-                <p>&#36; 115</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/origami-crane-necklace@1x.webp 1x, img/origami-crane-necklace@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/origami-crane-necklace-tab@1x.webp 1x, img/origami-crane-necklace-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/origami-crane-necklace-mob@1x.webp 1x, img/origami-crane-necklace-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/origami-crane-necklace@1x.jpg 1x, img/origami-crane-necklace@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/origami-crane-necklace-tab@1x.jpg 1x, img/origami-crane-necklace-tab@2x.jpg 2x">
-                  <img class="#" src="img/origami-crane-necklace@1x.jpg" srcset="img/origami-crane-necklace@2x.jpg 2x" alt="Многослойное колье">
-                </picture>
-                <h3>Origami crane necklace</h3>
-                <p>&#36; 105</p>
-              </a>
-            </li>
-            <li class="product__item">
-              <a href="#">
-                <picture>
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/marble-earrings@1x.webp 1x, img/marble-earrings@2x.webp 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/marble-earrings-tab@1x.webp 1x, img/marble-earrings-tab@2x.webp 2x">
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/marble-earrings-mob@1x.webp 1x, img/marble-earrings-mob@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(min-width: 1024px)" srcset="img/marble-earrings@1x.jpg 1x, img/marble-earrings@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/marble-earrings-tab@1x.jpg 1x, img/marble-earrings-tab@2x.jpg 2x">
-                  <img class="#" src="img/marble-earrings@1x.jpg" srcset="img/marble-earrings@2x.jpg 2x" alt="Многослойное колье">
-                </picture>
-                <h3>Marble earrings</h3>
-                <p>&#36; 95</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="pagination pagination-catalog">
-          <a class="pagination-catalog__link pagination-catalog__link--tab" href="#">Previous</a>
-          <ul class="pagination__list pagination__list--desk">
-            <li class="pagination__item">
-              <a href="#">1</a>
-            </li>
-            <li class="pagination__item">
-              <a href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <a href="#">4</a>
-            </li>
-            <li class="pagination__item">
-              <a href="#">6</a>
-            </li>
-          </ul>
-          <a class="pagination-catalog__link pagination-catalog__link--tab" href="#">Next</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer footer-catalog">
-    <section class="footer-form container">
-      <div class="footer-form__block">
-        <h2>The good stuff in your inbox</h2>
-        <p>News and updates from CH. No spam, we promise.</p>
-        <form class="footer-form__form" action="https://echo.htmlacademy.ru" method="POST">
-          <input type="email" id="footer-submit" required placeholder="Your E-mail"/>
-          <label for="footer-submit" aria-label="Your E-mail"></label>
-          <button type="submit">Sign Up
-            <svg width="29" height="9" viewBox="0 0 29 9" role="img" aria-label="">
-              <use xlink:href="img/sprite.svg#icon-submit"></use>
+    <div class="catalog-wrap">
+      <section class="catalog container">
+        <div class="filter">
+          <button class="filter__close" type="button" aria-label="filter close button" tabindex="16">
+            <svg width="32" height="32" role="img">
+              <use xlink:href="img/sprite_auto.svg#icon-close-round"></use>
             </svg>
           </button>
-        </form>
+            <div class="filter__block">
+              <details class="filter__wrapper" open>
+                <summary>Product</summary>
+                  <ul class="filter__list">
+                    <li class="filter__item">
+                      <input class="filter-checkbox-input" name="product-1" type="checkbox" id="product-1" checked>
+                      <label class="filter-checkbox-label" for="product-1">Necklaces</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="filter-checkbox-input" name="product-2" type="checkbox" id="product-2">
+                      <label class="filter-checkbox-label" for="product-2">Chokers</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="filter-checkbox-input" name="product-3" type="checkbox" id="product-3" checked>
+                      <label class="filter-checkbox-label" for="product-3">Rings</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="filter-checkbox-input" name="product-5" type="checkbox" id="product-5">
+                      <label class="filter-checkbox-label" for="product-5">Earrings</label>
+                    </li>
+                  </ul>
+              </details>
+
+              <details class="filter__wrapper">
+                <summary>Material</summary>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <input class="filter-checkbox-input" name="material-1" type="checkbox" id="material-1" checked>
+                    <label class="filter-checkbox-label" for="material-1">Gold</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="filter-checkbox-input" name="material-2" type="checkbox" id="material-2">
+                    <label class="filter-checkbox-label" for="material-2">Silver</label>
+                  </li>
+                </ul>
+              </details>
+
+              <details class="filter__wrapper">
+                <summary>Collection</summary>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <input class="filter-checkbox-input" name="collection-1" type="checkbox" id="collection-1" checked>
+                    <label class="filter-checkbox-label" for="collection-1">Pink flamingo</label>
+                  </li>
+                  <li class="filter__item">
+                    <input class="filter-checkbox-input" name="collection-2" type="checkbox" id="collection-2">
+                    <label class="filter-checkbox-label" for="collection-2">Dreams</label>
+                  </li>
+                </ul>
+              </details>
+              <details class="filter__wrapper" open>
+                <summary>Price</summary>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price">
+                      <input type="text" name="min-price" value="&#36; 55">
+                    </label>
+                    <label class="max-price">
+                      <input type="text" name="max-price" value="&#36; 155">
+                    </label>
+                  </div>
+                </div>
+              </details>
+            </div>
+              <div class="filter-btn filter-btn--open">
+                <button class="filter-btn__open filter-btn__open--apply" type="button" aria-label="Filter button">Apply</button>
+                <button class="filter-btn__open filter-btn__open--clear" type="button" aria-label="Filter button">Clear All</button>
+              </div>
+
+          </div>
+        <div class="product">
+          <div class="product__block">
+            <ul class="product__list">
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/double-pearl-earrings@1x.webp 1x, img/double-pearl-earrings@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/double-pearl-earrings-tab@1x.webp 1x, img/double-pearl-earrings-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/double-pearl-earrings-mob@1x.webp 1x, img/double-pearl-earrings-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/double-pearl-earrings@1x.jpg 1x, img/double-pearl-earrings@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/double-pearl-earrings-tab@1x.jpg 1x, img/double-pearl-earrings-tab@2x.jpg 2x">
+                    <img src="img/double-pearl-earrings@1x.jpg" srcset="img/double-pearl-earrings@2x.jpg 2x" alt="Двойные жемчужные серьги">
+                  </picture>
+                  <h3>Double pearl earrings</h3>
+                  <p>&#36; 115</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/black-choker-gold-bead@1x.webp 1x, img/black-choker-gold-bead@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/black-choker-gold-bead-tab@1x.webp 1x, img/black-choker-gold-bead-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/black-choker-gold-bead-mob@1x.webp 1x, img/black-choker-gold-bead-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/black-choker-gold-bead@1x.jpg 1x, img/black-choker-gold-bead@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/black-choker-gold-bead-tab@1x.jpg 1x, img/black-choker-gold-bead-tab@2x.jpg 2x">
+                    <img class="#" src="img/black-choker-gold-bead@1x.jpg" srcset="img/black-choker-gold-bead@2x.jpg 2x" alt="Колье с золотой бусиной">
+                  </picture>
+                  <h3>Choker with gold bead</h3>
+                  <p>&#36; 55</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/gold-layered-necklace@1x.webp 1x, img/gold-layered-necklace@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/gold-layered-necklace-tab@1x.webp 1x, img/gold-layered-necklace-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/gold-layered-necklace-mob@1x.webp 1x, img/gold-layered-necklace-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/gold-layered-necklace@1x.jpg 1x, img/gold-layered-necklace@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/gold-layered-necklace-tab@1x.jpg 1x, img/gold-layered-necklace-tab@2x.jpg 2x">
+                    <img src="img/gold-layered-necklace@1x.jpg" srcset="img/gold-layered-necklace@2x.jpg 2x" alt="Многослойное золотое колье">
+                  </picture>
+                  <h3>Gold layered necklace</h3>
+                  <p>&#36; 155</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/blue-gemstone-pendant@1x.webp 1x, img/blue-gemstone-pendant@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/blue-gemstone-pendant-tab@1x.webp 1x, img/blue-gemstone-pendant-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/blue-gemstone-pendant-mob@1x.webp 1x, img/blue-gemstone-pendant-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/blue-gemstone-pendant@1x.jpg 1x, img/blue-gemstone-pendant@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/blue-gemstone-pendant-tab@1x.jpg 1x, img/blue-gemstone-pendant-tab@2x.jpg 2x">
+                    <img src="img/blue-gemstone-pendant@1x.jpg" srcset="img/blue-gemstone-pendant@2x.jpg 2x" alt="Кулон с синим драгоценным камнем">
+                  </picture>
+                  <h3>Blue gemstone pendant</h3>
+                  <p>&#36; 105</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/boho-earrings@1x.webp 1x, img/boho-earrings@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/boho-earrings-tab@1x.webp 1x, img/boho-earrings-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/boho-earrings-mob@1x.webp 1x, img/boho-earrings-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/boho-earrings@1x.jpg 1x, img/boho-earrings@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/boho-earrings-tab@1x.jpg 1x, img/boho-earrings-tab@2x.jpg 2x">
+                    <img src="img/boho-earrings@1x.jpg" srcset="img/boho-earrings@2x.jpg 2x" alt="Серьги в стиле бохо">
+                  </picture>
+                  <h3>Boho earrings</h3>
+                  <p>&#36; 75</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/bird-necklace@1x.webp 1x, img/bird-necklace@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/bird-necklace-tab@1x.webp 1x, img/bird-necklace-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/bird-necklace-mob@1x.webp 1x, img/bird-necklace-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/bird-necklace@1x.jpg 1x, img/bird-necklace@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/bird-necklace-tab@1x.jpg 1x, img/bird-necklace-tab@2x.jpg 2x">
+                    <img src="img/bird-necklace@1x.jpg" srcset="img/bird-necklace@2x.jpg 2x" alt="Золотое колье с птичкой">
+                  </picture>
+                  <h3>Gold bird necklace</h3>
+                  <p>&#36; 135</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/black-leather-choker-necklace@1x.webp 1x, img/black-leather-choker-necklace@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/black-leather-choker-necklace-tab@1x.webp 1x, img/black-leather-choker-necklace-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/black-leather-choker-necklace-mob@1x.webp 1x, img/black-leather-choker-necklace-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/black-leather-choker-necklace@1x.jpg 1x, img/black-leather-choker-necklace@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/black-leather-choker-necklace-tab@1x.jpg 1x, img/black-leather-choker-necklace-tab@2x.jpg 2x">
+                    <img src="img/black-leather-choker-necklace@1x.jpg" srcset="img/black-leather-choker-necklace@2x.jpg 2x" alt="Чокер из кожи черного цвета">
+                  </picture>
+                  <h3>Black leather choker</h3>
+                  <p>&#36; 85</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace@1x.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/purple-gemstone-necklace-tab@1x.webp 1x, img/purple-gemstone-necklace-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/purple-gemstone-necklace-mob@1x.webp 1x, img/purple-gemstone-necklace-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace@1x.jpg 1x, img/purple-gemstone-necklace@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/purple-gemstone-necklace-tab@1x.jpg 1x, img/purple-gemstone-necklace-tab@2x.jpg 2x">
+                    <img src="img/purple-gemstone-necklace@1x.jpg" srcset="img/purple-gemstone-necklace@2x.jpg 2x" alt="Колье с аметистом">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p>&#36; 145</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/elephant-earrings@1x.webp 1x, img/elephant-earrings@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/elephant-earrings-tab@1x.webp 1x, img/elephant-earrings-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/elephant-earrings-mob@1x.webp 1x, img/elephant-earrings-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/elephant-earrings@1x.jpg 1x, img/elephant-earrings@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/elephant-earrings-tab@1x.jpg 1x, img/elephant-earrings-tab@2x.jpg 2x">
+                    <img class="#" src="img/elephant-earrings@1x.jpg" srcset="img/elephant-earrings@2x.jpg 2x" alt="Серьги в виде слона">
+                  </picture>
+                  <h3>Elephant earrings</h3>
+                  <p>&#36; 95</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/threader-necklace-closeup@1x.webp 1x, img/threader-necklace-closeup@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/threader-necklace-closeup-tab@1x.webp 1x, img/threader-necklace-closeup-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/threader-necklace-closeup-mob@1x.webp 1x, img/threader-necklace-closeup-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/threader-necklace-closeup@1x.jpg 1x, img/threader-necklace-closeup@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/threader-necklace-closeup-tab@1x.jpg 1x, img/threader-necklace-closeup-tab@2x.jpg 2x">
+                    <img class="#" src="img/threader-necklace-closeup@1x.jpg" srcset="img/threader-necklace-closeup@2x.jpg 2x" alt="Нитевидное колье">
+                  </picture>
+                  <h3>Threader necklace</h3>
+                  <p>&#36; 115</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/origami-crane-necklace@1x.webp 1x, img/origami-crane-necklace@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/origami-crane-necklace-tab@1x.webp 1x, img/origami-crane-necklace-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/origami-crane-necklace-mob@1x.webp 1x, img/origami-crane-necklace-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/origami-crane-necklace@1x.jpg 1x, img/origami-crane-necklace@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/origami-crane-necklace-tab@1x.jpg 1x, img/origami-crane-necklace-tab@2x.jpg 2x">
+                    <img class="#" src="img/origami-crane-necklace@1x.jpg" srcset="img/origami-crane-necklace@2x.jpg 2x" alt="Ожерелье оригами журавль">
+                  </picture>
+                  <h3>Origami crane necklace</h3>
+                  <p>&#36; 105</p>
+                </a>
+              </li>
+              <li class="product__item">
+                <a href="product.html">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/marble-earrings@1x.webp 1x, img/marble-earrings@2x.webp 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/marble-earrings-tab@1x.webp 1x, img/marble-earrings-tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp" srcset="img/marble-earrings-mob@1x.webp 1x, img/marble-earrings-mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(min-width: 1024px)" srcset="img/marble-earrings@1x.jpg 1x, img/marble-earrings@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/marble-earrings-tab@1x.jpg 1x, img/marble-earrings-tab@2x.jpg 2x">
+                    <img class="#" src="img/marble-earrings@1x.jpg" srcset="img/marble-earrings@2x.jpg 2x" alt="Серьги из мрамора">
+                  </picture>
+                  <h3>Marble earrings</h3>
+                  <p>&#36; 95</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="pagination pagination-catalog">
+            <a class="pagination-catalog__link pagination-catalog__link--tab" href="#">Previous</a>
+            <ul class="pagination__list pagination__list--desk">
+              <li class="pagination__item">
+                <a href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#">4</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#">5</a>
+              </li>
+            </ul>
+            <a class="pagination-catalog__link pagination-catalog__link--tab" href="#">Next</a>
+          </div>
+        </div>
+      </section>
       </div>
-      <div class="footer-menu">
-        <nav class="footer-menu__block">
+    </main>
+
+    <footer class="footer">
+      <section class="footer-form footer-catalog container">
+        <div class="footer-form__block">
+          <h2>The good stuff in your inbox</h2>
+          <p>News and updates from CH. No spam, we promise.</p>
+          <form class="footer-form__form" action="https://echo.htmlacademy.ru" method="POST">
+            <label for="footer-submit" aria-label="Your E-mail">
+              <input type="email" id="footer-submit" required placeholder="Your E-mail"/>
+            </label>
+            <button type="submit">Sign Up
+              <svg width="29" height="9" viewBox="0 0 29 9" role="img" aria-label="">
+                <use xlink:href="img/sprite.svg#icon-submit"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <nav class="footer-menu">
           <ul class="footer-menu__list">
             <li class="footer-menu__item">
               <a>Ordering & Payment</a>
@@ -507,9 +516,8 @@
             </li>
           </ul>
         </nav>
-      </div>
-    </section>
-  </footer>
+      </section>
+    </footer>
 
   <script src="js/script.min.js"></script>
 

@@ -1,0 +1,64 @@
+.filter-btn {
+  display: none;
+
+  @media (max-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.filter-btn__open {
+  width: 100%;
+  min-height: 68px;
+  padding: 5px;
+  background-color: $light-gray-red;
+  border: none;
+
+  // @media (max-width: $desktop) {
+  //   min-width: 678px;
+  // }
+
+  // @media (max-width: $tablet) {
+  //   min-width: 298px;
+  // }
+}
+
+.filter-btn--open {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.filter-btn__open--apply {
+  background: $light-gray-red;
+  border: 1px solid $light-gray-red;
+}
+
+.filter-btn__open--clear {
+  background-color: transparent;
+  border: 1px solid $basic-color;
+  color: $basic-color;
+}
+
+
+.filter--opened .filter-btn--open {
+  @media (max-width: $desktop) {
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-right: 28px;
+    padding-left: 29px;
+  }
+}

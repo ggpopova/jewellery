@@ -1,8 +1,7 @@
 .burger-btn {
   display: none;
 
-
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     display: block;
     position: relative;
     top: 0;
@@ -31,7 +30,7 @@
 .header--opened .burger-btn {
   display: none;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     display: block;
 
     &::before {

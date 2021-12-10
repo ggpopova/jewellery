@@ -1,67 +1,162 @@
-
-.filter__close {
-  display: none;
-
-  @media (max-width: $tablet) {
-    display: block;
+.filter {
+  @media (max-width: $desktop) {
+    display: none;
   }
 }
 
-.filter__wrapper {
-  padding: 28px 25px 29px 35px;
-  outline: 1px solid $light-gray-red;
+.filter__close {
+  display: none;
 }
+
+.filter--opened .filter__close {
+  display: none;
+
+  @media (max-width: $desktop) {
+    position: absolute;
+    top: -12px;
+    right: -16px;
+    display: block;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    background-color: $background-black;
+    border: none;
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 9px;
+      width: 14px;
+      height: 14px;
+      background-image: url("../img/icon-close.svg");
+      background-color: $background-black;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    right: 12px;
+
+    &::before {
+      right: 12px;
+    }
+  }
+}
+
+.filter__block {
+  margin-bottom: 35px;
+}
+
+.filter__wrapper {
+  padding: 23px 25px 23px 23px;
+  border: 1px solid $light-gray-red;
+
+  @media (max-width: $desktop) {
+    border: none;
+    border-bottom: 1px solid $light-gray-red;
+  }
+
+  @media (max-width: $desktop) {
+    padding-top: 39px;
+    padding-bottom: 38px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 9px;
+    margin-right: 11px;
+    padding: 31px 13px 26px 21px;
+  }
+}
+
+.filter__wrapper:nth-child(2n) {
+  padding-bottom: 22px;
+
+  @media (max-width: $desktop) {
+    padding-top: 34px;
+    padding-bottom: 35px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 23px;
+    padding-bottom: 24px;
+  }
+}
+
+.filter__wrapper:nth-child(3n) {
+  padding-bottom: 20px;
+
+  @media (max-width: $desktop) {
+    padding-bottom: 32px;
+    padding-top: 35px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+}
+
+.filter__wrapper:nth-child(4n) {
+  padding-bottom: 11px;
+
+  @media (max-width: $desktop) {
+    padding-bottom: 31px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 19px;
+  }
+}
+// Временно закомментирован
 
 .filter__wrapper summary {
   position: relative;
+  display: flex;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 8px;
-    top: 7px;
-    right: 8px;
-    padding: 5px;
-    background-image: url("../img/icon-arrow-down.svg");
-    background-repeat: no-repeat;
-  }
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     width: 23px;
+//     height: 18px;
+//     top: -2px;
+//     right: 7px;
+//     background-image: url("../img/icon-arrow-down.svg");
+//     background-repeat: no-repeat;
+//   }
 
   @media (max-width: $tablet) {
     font-size: 18px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 23px;
-      height: 12px;
-      top: 7px;
-      right: 8px;
-      padding: 5px;
-      background-image: url("../img/icon-arrow-down.svg");
-      background-repeat: no-repeat;
-    }
+    // &::before {
+    //   width: 23px;
+    //   height: 18px;
+    //   top: -2px;
+    //   right: 7px;
+    //   background-size: 30px 30px;
+    // }
   }
 
-  @media (max-width: $mobile) {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 10px;
-      top: 7px;
-      right: 8px;
-      padding: 5px;
-      background-image: url("../img/icon-arrow-down.svg");
-      background-repeat: no-repeat;
-    }
-  }
+//   @media (max-width: $mobile) {
+//     &::before {
+//       // content: "";
+//       // position: absolute;
+//       width: 20px;
+//       height: 10px;
+//       // top: 7px;
+//       // right: 8px;
+//       // padding: 5px;
+//       // background-image: url("../img/icon-arrow-down.svg");
+//       // background-repeat: no-repeat;
+//     }
+//   }
 }
 
-.filter__wrapper summary::-webkit-details-marker {
+summary::-webkit-details-marker {
   display: none;
 }
 
@@ -69,11 +164,11 @@ details[open] > summary {
   &::before {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 14px;
-    top: 7px;
-    right: 8px;
-    padding: 5px;
+    width: 23px;
+    height: 18px;
+    top: -2px;
+    right: 7px;
+    background-size: 30px 30px;
     background-image: url("../img/icon-arrow-top.svg");
     background-repeat: no-repeat;
   }
@@ -83,17 +178,33 @@ details[open] > summary {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  row-gap: 15px;
+  row-gap: 13px;
   margin: 0;
-  padding: 0;
-  padding-top: 30px;
+  padding-top: 23px;
+  padding-left: 13px;
   list-style-type: none;
+
+  @media (max-width: $desktop) {
+    padding-left: 8px;
+    row-gap: 19px;
+  }
+
+  @media (max-width: $tablet) {
+    row-gap: 18px;
+  }
 }
 
 .filter__item {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+
+  @media (max-width: $desktop) {
+    font-size: 16px;
+  }
 }
 
 .filter-checkbox-input {
@@ -122,6 +233,11 @@ details[open] > summary {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
+
+  @media (max-width: $tablet) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 /* стили при наведении курсора на checkbox */
@@ -152,12 +268,29 @@ details[open] > summary {
 
 .range-filter {
   width: 200px;
+
+  @media (max-width: $desktop) {
+    width: 100%;
+  }
+
+  @media (max-width: $tablet) {
+    width: 90%;
+  }
 }
 
 .range-controls {
   position: relative;
-  margin-bottom: 17px;
-  padding-top: 32px;
+  margin-bottom: 7px;
+  padding-top: 27px;
+
+  @media (max-width: $desktop) {
+    padding-top: 37px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 33px;
+    margin-bottom: 9px;
+  }
 }
 
 .range-controls .scale {
@@ -166,10 +299,19 @@ details[open] > summary {
 }
 
 .range-controls .bar {
-  width: 90px;
+  width: 101px;
   margin-left: 54px;
   height: 2px;
   background-color: $light-gray-red;
+
+  @media (max-width: $desktop) {
+    width: 188px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 120px;
+    margin-left: 48px;
+  }
 }
 
 .bar {
@@ -179,8 +321,7 @@ details[open] > summary {
 
 .range-controls .toggle {
   position: absolute;
-  top: 26px;
-  left: 0;
+  top: 20px;
   width: 15px;
   height: 15px;
   padding: 0;
@@ -188,19 +329,58 @@ details[open] > summary {
   border-radius: 50%;
   cursor: pointer;
   box-sizing: content-box;
+
+  @media (max-width: $desktop) {
+    top: 30px;
+  }
+
+  @media (max-width: $tablet) {
+    top: 27px;
+  }
 }
 
 .range-controls .toggle-min {
-  left: 50px;
+  left: 46px;
+
+  @media (max-width: $desktop) {
+    left: 53px;
+    width: 17px;
+    height: 17px;
+  }
+
+  @media (max-width: $tablet) {
+    left: 31px;
+  }
 }
 
 .range-controls .toggle-max {
-  left: 140px;
+  left: 152px;
+
+  @media (max-width: $desktop) {
+    left: 228px;
+  }
+
+  @media (max-width: $tablet) {
+    left: 168px;
+  }
 }
 
 .price-controls {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 157px;
+  margin: 0 auto;
+  margin-left: 28px;
+  font-weight: 500;
+
+  @media (max-width: $desktop) {
+    width: 237px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 187px;
+    margin-left: 14px;
+  }
 }
 
 .price-controls input {
@@ -211,8 +391,46 @@ details[open] > summary {
   line-height: 130%;
   text-align: center;
   border: none;
+
+  @media (max-width: $desktop) {
+    font-size: 16px;
+  }
 }
 
 .hyphen {
   margin: auto;
+}
+
+.filter--opened .filter {
+  @media (max-width: $desktop) {
+    display: block;
+    position: absolute;
+    min-width: 422px;
+    background-color: white;
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+  }
+
+  @media (max-width: $tablet) {
+    position: static;
+    min-width: 270px;
+    margin-bottom: 47px;
+  }
+}
+
+.filter--opened .filter__block {
+  @media (max-width: $desktop) {
+    margin-bottom: 41px;
+    border: none;
+    border-bottom: 1px solid $light-gray-red;
+    // box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 28px;
+    border: none;
+  }
+}
+
+.filter__close .filter {
+  display: none;
 }

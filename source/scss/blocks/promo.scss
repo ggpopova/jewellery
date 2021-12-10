@@ -1,3 +1,8 @@
+.page-main {
+  flex: 1 0 auto;
+}
+
+
 .promo {
   position: relative;
   min-height: 463px;
@@ -36,6 +41,7 @@
 
   @media (max-width: $tablet) {
     min-width: 320px;
+    margin-bottom: 59px;
     background-image: url("../img/promo-main-mob@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -43,9 +49,9 @@
     }
   }
 
-  @media (max-width: $mobile) {
-    margin-bottom: 59px;
-  }
+  // @media (max-width: $mobile) {
+
+  // }
 }
 
 .promo h2,
@@ -70,7 +76,7 @@
   font-size: 45px;
   letter-spacing: 0.03em;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     margin-bottom: -2px;
     padding-top: 191px;
     padding-left: 38px;
@@ -84,7 +90,7 @@
   font-weight: normal;
   font-size: 38px;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     padding-right: 22px;
     font-size: 34px;
   }
