@@ -28,11 +28,12 @@
   }
 }
 
-.faq__list {
+.faq__wrapper {
   @include list-style ;
-
-  display: grid;
-  grid-template-rows: max-content;
+  max-width: 972px;
+  margin: 0 auto;
+  // display: grid;
+  // grid-template-rows: max-content;
 }
 
 .faq__item {
@@ -48,6 +49,7 @@
     min-height: 100px;
     padding-top: 45px;
     padding-left: 43px;
+    padding-right: 57px;
     padding-bottom: 44px;
   }
 
@@ -200,8 +202,12 @@ summary::-webkit-details-marker {
   font-weight: normal;
   font-size: 16px;
 
+  @media (max-width: $desktop) {
+    max-width: 100%;
+  }
+
   @media (max-width: $tablet) {
-    max-width: 214px;
+    padding-right: 40px;
     font-size: 14px;
   }
 }

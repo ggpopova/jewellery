@@ -66,4 +66,8 @@
   @media (max-width: $desktop) {
     margin-top: 21px;
   }
+
+  @media (max-width: $tablet) {
+    margin-top: 12px;
+  }
 }

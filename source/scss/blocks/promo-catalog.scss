@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $desktop) {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     background-image: url("../img/promo-catalog-tab@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -22,6 +22,7 @@
   }
 
   @media (max-width: $tablet) {
+    margin-bottom: 40px;
     background-image: url("../img/promo-catalog-mob@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -38,9 +39,18 @@
 
 .promo--catalog h2 {
   margin-bottom: 4px;
-  padding-top: 82px;
+  padding-top: 91px;
   font-weight: bold;
   font-size: 34px;
+  line-height: 130%;
+
+  @media (max-width: $desktop) {
+    padding-top: 82px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 79px;
+  }
 }
 
 .promo--catalog p {

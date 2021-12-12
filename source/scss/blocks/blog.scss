@@ -1,5 +1,5 @@
 .blog {
-  margin-bottom: 119px;
+  margin-bottom: 115px;
 
   @media (max-width: $desktop) {
     margin-bottom: 69px;
@@ -30,6 +30,10 @@
   font-family: $font-cormorant;
   font-weight: bold;
   font-size: 34px;
+
+  @media (max-width: $desktop) {
+    margin: 0 0 16px;
+  }
 }
 
 .blog__shop {

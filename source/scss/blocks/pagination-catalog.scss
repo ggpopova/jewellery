@@ -15,6 +15,9 @@
 
   @media (max-width: $desktop) {
     margin: 0 auto;
+  }
+
+  @media (max-width: $tablet) {
     padding-right: 0;
   }
 }
