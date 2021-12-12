@@ -1,5 +1,5 @@
-@mixin list-style($pd:0, $mg:0, $ls:none) {
-  padding: $pd;
-  margin: $mg;
-  list-style: $ls;
+@mixin list-style {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

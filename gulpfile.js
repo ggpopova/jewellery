@@ -135,8 +135,8 @@ const build = (done) => gulp.series (
   styles,
   scripts,
   sprite
-  // , images,
-  // webp
+  , images,
+  webp
 )(done);
 
 exports.build = build;

@@ -34,7 +34,7 @@
     "gulp-webp": "^4.0.1",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-svgo": "^8.0.0",
-    "stylelint": "13.6.1",
+    "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "^0.1.4"
   },
   "editorconfig-cli": [
@@ -45,10 +45,6 @@
     "source/img/**/*.svg",
     "source/scss/**/*.scss"
   ],
-  "dependencies": {
-    "breakpoints-js": "^1.0.6",
-    "editorconfig": "^0.15.3"
-  },
   "description": "Автор: Галина Попова",
   "main": "gulpfile.js"
 }

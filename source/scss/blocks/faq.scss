@@ -29,11 +29,10 @@
 }
 
 .faq__list {
+  @include list-style ;
+
   display: grid;
   grid-template-rows: max-content;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .faq__item {
@@ -41,8 +40,6 @@
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
-  max-width: 970px;
-  min-width: 290px;
   margin: 0 auto;
   padding: 43px;
   outline: 1px solid $light-gray-red;
@@ -104,7 +101,7 @@
 
 .faq__item summary {
   position: relative;
-  display: block;
+  display: flex;
   margin-bottom: 8px;
   font-weight: 500;
   font-size: 18px;
@@ -112,20 +109,26 @@
   &::before {
     content: "";
     position: absolute;
-    width: 23px;
-    height: 12px;
-    top: 5px;
-    right: 0;
+    top: 1px;
+    right: 3px;
+    width: 19px;
+    height: 17px;
     background-image: url("../img/icon-arrow-down.svg");
-    background-size: 15px 7px;
+    background-size: 19px 17px;
     background-repeat: no-repeat;
+
+    transition: transform 0.3s;
   }
 
   @media (max-width: $desktop) {
     margin-bottom: 26px;
 
     &::before {
-      background-size: 23px 12px;
+      top: 4px;
+      right: -11px;
+      width: 28px;
+      height: 14px;
+      background-size: 28px 14px;
     }
   }
 
@@ -136,7 +139,11 @@
     font-size: 16px;
 
     &::before {
-      background-size: 20px 10px;
+      top: 9px;
+      right: 8px;
+      width: 20px;
+      height: 13px;
+      background-size: 21px 13px;
     }
   }
 }
@@ -145,26 +152,29 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-.faq__item details[open] > summary {
+.faq__item[open] > summary {
   max-height: 160px;
 
   &::before {
     content: "";
     position: absolute;
-    width: 23px;
-    height: 12px;
-    top: 5px;
-    right: 0;
-    background-image: url("../img/icon-arrow-top.svg");
-    background-size: 15px 7px;
-    background-repeat: no-repeat;
+    width: 19px;
+    height: 17px;
+    top: 1px;
+    right: 3px;
+    background-size: 19px 17px;
+    transform: rotate(180deg);
   }
 
   @media (max-width: $desktop) {
     margin-bottom: 26px;
 
     &::before {
-      background-size: 23px 12px;
+      top: 4px;
+      right: -11px;
+      width: 28px;
+      height: 14px;
+      background-size: 28px 14px;
     }
   }
 
@@ -175,7 +185,11 @@ summary::-webkit-details-marker {
     font-size: 16px;
 
     &::before {
-      background-size: 20px 10px;
+      top: 9px;
+      right: 8px;
+      width: 21px;
+      height: 13px;
+      background-size: 21px 13px;
     }
   }
 }

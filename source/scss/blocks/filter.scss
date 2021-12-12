@@ -109,7 +109,6 @@
     padding-bottom: 19px;
   }
 }
-// Временно закомментирован
 
 .filter__wrapper summary {
   position: relative;
@@ -118,71 +117,91 @@
   font-size: 16px;
   line-height: 130%;
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 23px;
-//     height: 18px;
-//     top: -2px;
-//     right: 7px;
-//     background-image: url("../img/icon-arrow-down.svg");
-//     background-repeat: no-repeat;
-//   }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 17px;
+    top: 3px;
+    right: -6px;
+    background-image: url("../img/icon-arrow-down.svg");
+    background-size: 19px 17px;
+    background-repeat: no-repeat;
 
-  @media (max-width: $tablet) {
-    font-size: 18px;
-
-    // &::before {
-    //   width: 23px;
-    //   height: 18px;
-    //   top: -2px;
-    //   right: 7px;
-    //   background-size: 30px 30px;
-    // }
+    transition: transform 0.3s;
   }
 
-//   @media (max-width: $mobile) {
-//     &::before {
-//       // content: "";
-//       // position: absolute;
-//       width: 20px;
-//       height: 10px;
-//       // top: 7px;
-//       // right: 8px;
-//       // padding: 5px;
-//       // background-image: url("../img/icon-arrow-down.svg");
-//       // background-repeat: no-repeat;
-//     }
-//   }
+  @media (max-width: $desktop) {
+    font-size: 18px;
+
+    &::before {
+      width: 28px;
+      height: 14px;
+      top: 3px;
+      right: 8px;
+      background-size: 28px 14px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &::before {
+      top: 6px;
+      right: 7px;
+      width: 21px;
+      height: 13px;
+      background-size: 21px 13px;
+    }
+  }
 }
 
 summary::-webkit-details-marker {
   display: none;
 }
 
-details[open] > summary {
+.filter__wrapper[open] > summary {
   &::before {
     content: "";
     position: absolute;
-    width: 23px;
-    height: 18px;
-    top: -2px;
-    right: 7px;
-    background-size: 30px 30px;
-    background-image: url("../img/icon-arrow-top.svg");
-    background-repeat: no-repeat;
+    width: 19px;
+    height: 17px;
+    top: 3px;
+    right: -6px;
+    background-size: 19px 17px;
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: $desktop) {
+    &::before {
+      top: 3px;
+      right: 8px;
+      width: 28px;
+      height: 14px;
+      background-size: 28px 14px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &::before {
+      top: 6px;
+      right: 7px;
+      width: 21px;
+      height: 13px;
+      background-size: 21px 13px;
+    }
   }
 }
 
 .filter__list {
+  @include list-style ;
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 13px;
-  margin: 0;
+  // margin: 0;
   padding-top: 23px;
   padding-left: 13px;
-  list-style-type: none;
+  // list-style-type: none;
 
   @media (max-width: $desktop) {
     padding-left: 8px;
@@ -213,14 +232,12 @@ details[open] > summary {
   opacity: 0;
 }
 
-/* для элемента label, связанного с .filter-checkbox-input */
 .filter-checkbox-input + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
-/* создание в label псевдоэлемента before со следующими стилями */
 .filter-checkbox-input + label::before {
   content: "";
   display: inline-block;
@@ -240,28 +257,23 @@ details[open] > summary {
   }
 }
 
-/* стили при наведении курсора на checkbox */
 .filter-checkbox-input:not(:disabled):not(:checked) + label:hover::before {
   border-color: $light-gray-red;
 }
 
-/* стили для активного чекбокса (при нажатии на него) */
 .filter-checkbox-input:not(:disabled):active + label::before {
   background-color: $light-gray-red;
 }
 
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
 .filter-checkbox-input:focus:not(:checked) + label::before {
   border-color: $light-gray-red;
 }
 
-/* стили для чекбокса, находящегося в состоянии checked */
 .filter-checkbox-input:checked + label::before {
   border-color: $light-gray-red;
   background-color: $light-gray-red;
 }
 
-/* стили для чекбокса, находящегося в состоянии disabled */
 .filter-checkbox-input:disabled + label::before {
   background-color: $light-gray-red;
 }
@@ -406,8 +418,8 @@ details[open] > summary {
     display: block;
     position: absolute;
     min-width: 422px;
-    background-color: white;
-    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+    background-color: $basic-background;
+    box-shadow: 0 5px 32px $light-gray;
   }
 
   @media (max-width: $tablet) {
@@ -422,7 +434,6 @@ details[open] > summary {
     margin-bottom: 41px;
     border: none;
     border-bottom: 1px solid $light-gray-red;
-    // box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
   }
 
   @media (max-width: $tablet) {

@@ -1,14 +1,15 @@
 .navbar__list {
+  @include list-style;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-width: 508px;
-  margin: 0 auto;
-  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
   padding-left: 12px;
-  list-style-type: none;
 
   @media (max-width: $desktop) {
     flex-direction: column;
@@ -35,14 +36,13 @@
   display: none;
 
   @media (max-width: $desktop) {
+    @include list-style;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
-    margin: 0;
-    padding: 0;
-    list-style: none;
   }
 }
 

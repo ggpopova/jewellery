@@ -2,12 +2,9 @@
   flex: 1 0 auto;
 }
 
-
 .promo {
   position: relative;
   min-height: 463px;
-  // width: auto;
-  min-width: 1023px;
   margin: 0 auto 119px;
   padding: 0;
   background-image: url("../img/promo-main@1x.jpg");
@@ -30,7 +27,6 @@
   }
 
   @media (max-width: $desktop) {
-    min-width: 768px;
     margin-bottom: 69px;
     background-image: url("../img/promo-main-tab@1x.jpg");
 
@@ -40,7 +36,6 @@
   }
 
   @media (max-width: $tablet) {
-    min-width: 320px;
     margin-bottom: 59px;
     background-image: url("../img/promo-main-mob@1x.jpg");
 
@@ -48,10 +43,6 @@
       background-image: url("../img/promo-main-mob@2x.jpg");
     }
   }
-
-  // @media (max-width: $mobile) {
-
-  // }
 }
 
 .promo h2,

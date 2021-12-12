@@ -1,10 +1,4 @@
 // SIZES
-
-// $desktop: 1366px;
-// $tablet-width: 768px;
-// $mobile-width: 320px;
-
-$mobile: 319px;
 $tablet: 767px;
 $tablet-max: 900px;
 $desktop: 1023px;
@@ -19,12 +13,13 @@ $font-cormorant: "Cormorant Garamond", "Georgia", serif;
 $basic-color: #1d1613;
 $basic-background: #ffffff;
 
-$background-black: #000000;
+$background-black: rgb(0, 0, 0);
 $smoky-white: #f6f5f4;
 $brownish-gray: rgba(86, 64, 52, 0.7);
 $light-gray-red: #a87b62;
 $gray-crayola: #9b9997;
 $pearl-white: #f0eae4;
 $grayish-purplish-red: #844d4d;
-$white-antique:  hsla(0, 0%, 100%, 0.15);
-// $background: #564034b3;
+$white-antique:  rgba(255, 255, 255, 0.15);
+$forest-wolf: #e2ddd73d;
+$light-gray: rgba(219, 213, 208, 0.24);

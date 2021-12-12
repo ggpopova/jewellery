@@ -23,7 +23,7 @@
   padding: 6px;
 }
 
-.pagination__list--desk {
+.pagination-catalog .pagination__list--desk {
   @media (max-width: $tablet) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);

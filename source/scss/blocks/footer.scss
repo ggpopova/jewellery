@@ -34,12 +34,6 @@
   }
 }
 
-.footer-form__block {
-  @media (max-width: $mobile) {
-    max-width: 290px;
-  }
-}
-
 .footer-form__block h2,
 .footer-form__block p {
   margin: 0 auto;
@@ -167,21 +161,19 @@
 }
 
 .footer-menu__list {
+  @include list-style;
+
   display: grid;
   row-gap: 20px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .footer-menu__item a,
 .footer-menu__item--social a {
-  margin: 0;
-  padding: 0;
+  @include list-style;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
-  list-style-type: none;
   color: $basic-background;
 
   &:hover,
