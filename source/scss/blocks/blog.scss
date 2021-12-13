@@ -11,6 +11,8 @@
 }
 
 .blog a {
+  cursor: pointer;
+
   &:hover,
   &:focus,
   &:active {
@@ -26,13 +28,13 @@
 }
 
 .blog h2 {
-  margin: 0 0 20px;
+  margin: 0 0 19px;
   font-family: $font-cormorant;
   font-weight: bold;
   font-size: 34px;
 
   @media (max-width: $desktop) {
-    margin: 0 0 16px;
+    margin: 0 0 20px;
   }
 }
 
@@ -45,7 +47,7 @@
   border-bottom: 1px solid $light-gray-red;
 
   @media (max-width: $tablet) {
-    margin-bottom: 51px;
+    margin-bottom: 48px;
   }
 }
 

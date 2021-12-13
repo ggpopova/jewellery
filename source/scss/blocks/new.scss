@@ -1,11 +1,9 @@
 .new {
   position: relative;
-  margin-bottom: 115px;
+  margin-bottom: 117px;
 
   @media (max-width: $desktop) {
     margin-bottom: 64px;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   @media (max-width: $tablet) {
@@ -13,50 +11,27 @@
   }
 }
 
-.new__wrapper {
-  position: absolute;
-  content: "";
-  height: 11px;
-  width: 100%;
-  top: 43px;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: $tablet) {
-    display: none;
-  }
-}
-
-.new__btn {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: 0.5;
-  }
-}
-
 .new h2,
 .new__shop {
   display: flex;
   justify-content: center;
+  text-align: center;
   margin: 0;
   line-height: 130%;
 }
 
 .new h2 {
   margin-bottom: 24px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-family: $font-cormorant;
   font-weight: bold;
   font-size: 34px;
 
   @media (max-width: $desktop) {
     margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -66,11 +41,15 @@
   font-weight: 500;
   font-size: 16px;
   border-bottom: 1px solid $light-gray-red;
+  cursor: pointer;
 
-  &:hover,
+  &:hover {
+    opacity: 0.5;
+  }
+
   &:focus,
   &:active {
-    opacity: 0.5;
+    opacity: 1;
   }
 
   @media (max-width: $desktop) {
@@ -81,104 +60,4 @@
   @media (max-width: $tablet) {
     margin-bottom: 40px;
   }
-}
-
-.new__block {
-  @include list-style ;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  // margin: 0;
-  margin-bottom: 54px;
-  // padding: 0;
-  // list-style-type: none;
-
-  @media (max-width: $desktop) {
-    grid-template-columns: 1fr;
-    margin-bottom: 46px;
-  }
-
-  @media (max-width: $tablet) {
-    margin-bottom: 36px;
-  }
-}
-
-.new__list {
-  @include list-style;
-
-  display: inline-grid;
-  grid-template-columns: repeat(12, 270px);
-  justify-items: center;
-  gap: 30px;
-  overflow: auto;
-
-  @media (max-width: $desktop) {
-    grid-template-columns: repeat(12, 324px);
-  }
-
-  @media (max-width: $tablet) {
-    grid-template-columns: repeat(12, 130px);
-    grid-template-rows: 216px;
-  }
-}
-
-.new__list--block {
-  @media (max-width: $desktop) {
-    display: none;
-  }
-}
-
-.new__item a {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.new__item img {
-  margin-bottom: 17px;
-
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: 0.5;
-  }
-
-  @media (max-width: $tablet) {
-    margin-bottom: 12px;
-  }
-}
-
-.new__item h3,
-.new__item p {
-  margin: 0;
-  line-height: 130%;
-  text-align: center;
-
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-.new__item h3,
-.pagination__item {
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.new__item h3 {
-  margin-bottom: 5px;
-
-  @media (max-width: $tablet) {
-    max-width: 150px;
-    margin-bottom: 8px;
-  }
-}
-
-.new__item p {
-  font-weight: bold;
-  font-size: 14px;
 }

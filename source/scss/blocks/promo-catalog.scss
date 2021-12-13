@@ -35,6 +35,7 @@
 .promo--catalog p {
   padding-left: 24px;
   padding-right: 14px;
+  text-align: center;
 }
 
 .promo--catalog h2 {
@@ -45,7 +46,7 @@
   line-height: 130%;
 
   @media (max-width: $desktop) {
-    padding-top: 82px;
+    padding-top: 90px;
   }
 
   @media (max-width: $tablet) {

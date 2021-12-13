@@ -1,5 +1,5 @@
 .gallery {
-  margin-bottom: 128px;
+  margin-bottom: 130px;
 
   @media (max-width: $desktop) {
     margin-bottom: 79px;
@@ -21,6 +21,9 @@
 .gallery h2 {
   margin: 0;
   margin-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
   font-family: $font-cormorant;
   font-weight: bold;
   font-size: 34px;
@@ -28,16 +31,19 @@
 
   @media (max-width: $desktop) {
     margin-bottom: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 .gallery a {
   width: fit-content;
-  margin: 0 auto 62px;
+  margin: 0 auto 61px;
   padding-bottom: 4px;
   font-weight: 500;
   font-size: 16px;
   border-bottom: 1px solid $light-gray-red;
+  cursor: pointer;
 
   &:hover,
   &:focus,
@@ -46,7 +52,7 @@
   }
 
   @media (max-width: $desktop) {
-    margin-bottom: 60px;
+    margin-bottom: 62px;
   }
 
   @media (max-width: $tablet) {

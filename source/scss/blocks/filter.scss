@@ -102,7 +102,7 @@
   padding-bottom: 11px;
 
   @media (max-width: $desktop) {
-    padding-bottom: 31px;
+    padding-bottom: 26px;
   }
 
   @media (max-width: $tablet) {
@@ -198,14 +198,12 @@ summary::-webkit-details-marker {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 13px;
-  // margin: 0;
   padding-top: 23px;
   padding-left: 13px;
-  // list-style-type: none;
 
   @media (max-width: $desktop) {
     padding-left: 8px;
-    row-gap: 19px;
+    row-gap: 17px;
   }
 
   @media (max-width: $tablet) {
@@ -216,6 +214,7 @@ summary::-webkit-details-marker {
 .filter__item {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   font-weight: 500;
   font-size: 14px;
@@ -276,6 +275,10 @@ summary::-webkit-details-marker {
 
 .filter-checkbox-input:disabled + label::before {
   background-color: $light-gray-red;
+}
+
+.filter-checkbox-input:focus-visible + label {
+  outline: 1px solid $light-gray;
 }
 
 .range-filter {

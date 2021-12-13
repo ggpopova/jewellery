@@ -1,6 +1,6 @@
 .faq {
   min-width: 290px;
-  margin-bottom: 109px;
+  margin-bottom: 110px;
 
   @media (max-width: $desktop) {
     margin-bottom: 72px;
@@ -32,8 +32,6 @@
   @include list-style ;
   max-width: 972px;
   margin: 0 auto;
-  // display: grid;
-  // grid-template-rows: max-content;
 }
 
 .faq__item {
@@ -47,15 +45,12 @@
 
   @media (max-width: $desktop) {
     min-height: 100px;
-    padding-top: 45px;
-    padding-left: 43px;
-    padding-right: 57px;
-    padding-bottom: 44px;
+    padding: 45px 57px 44px 43px;
   }
 
   @media (max-width: $tablet) {
     min-height: 83px;
-    padding: 15px 19px 19px 16px;
+    padding: 17px 19px 19px 19px;
     font-size: 38px;
   }
 }
@@ -124,6 +119,7 @@
 
   @media (max-width: $desktop) {
     margin-bottom: 26px;
+    padding-right: 20px;
 
     &::before {
       top: 4px;
@@ -137,7 +133,7 @@
   @media (max-width: $tablet) {
     margin-bottom: 16px;
     padding-left: 5px;
-    padding-right: 20px;
+    padding-right: 26px;
     font-size: 16px;
 
     &::before {
@@ -156,6 +152,7 @@ summary::-webkit-details-marker {
 
 .faq__item[open] > summary {
   max-height: 160px;
+  overflow: auto;
 
   &::before {
     content: "";
@@ -170,6 +167,7 @@ summary::-webkit-details-marker {
 
   @media (max-width: $desktop) {
     margin-bottom: 26px;
+    padding-right: 20px;
 
     &::before {
       top: 4px;
@@ -183,7 +181,8 @@ summary::-webkit-details-marker {
   @media (max-width: $tablet) {
     margin-bottom: 16px;
     padding-left: 5px;
-    padding-right: 20px;
+
+    padding-right: 26px;
     font-size: 16px;
 
     &::before {
@@ -207,7 +206,7 @@ summary::-webkit-details-marker {
   }
 
   @media (max-width: $tablet) {
-    padding-right: 40px;
+    padding-right: 41px;
     font-size: 14px;
   }
 }

@@ -24,6 +24,10 @@
 .header--opened .header {
   @media (max-width: $desktop) {
     display: block;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
     background-color: $light-gray-red;
   }
 }
@@ -32,7 +36,7 @@
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
   padding-top: 30px;
   padding-bottom: 10px;
 
@@ -67,20 +71,32 @@
 .header__link-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: baseline;
-  flex-wrap: wrap;
   margin-top: -25px;
   margin-left: auto;
-  // padding: 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  // list-style-type: none;
 
   @media (max-width: $desktop) {
     width: auto;
     margin-top: 0;
+  }
+}
+
+.user-link__item {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus,
+  &:active,
+  &:focus-visible {
+    opacity: 1;
   }
 }
 
@@ -153,6 +169,7 @@
 .header__search {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   margin-right: auto;
   margin-bottom: 19px;
@@ -162,7 +179,14 @@
   }
 }
 
-.header__search input {
+.header__search label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.header__search label input {
   min-width: 120px;
   padding-left: 15px;
   font-weight: 500;
@@ -170,6 +194,23 @@
   line-height: 21px;
   border: none;
   color: $gray-crayola;
+}
+
+.header--menu button,
+.header__search label input[type="search"],
+.header__navbar .search-form input[type="search"] {
+  cursor: pointer;
+
+  &:hover {
+    // outline: none;
+    opacity: 0.5;
+  }
+
+  &:focus,
+  &:active,
+  &:focus-visible {
+    opacity: 1;
+  }
 }
 
 .header__navbar {
@@ -180,7 +221,6 @@
   margin-bottom: 20px;
   align-items: baseline;
   min-width: 651px;
-  // list-style: none;
 
   @media (max-width: $desktop) {
     display: none;
@@ -198,7 +238,6 @@
     max-width: 651px;
     margin: 0;
     padding-bottom: 55px;
-    // list-style: none;
   }
 }
 
@@ -210,15 +249,14 @@
   @media (max-width: $desktop) {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     height: 42px;
     padding-left: 0;
     margin-bottom: 41px;
     border: none;
-    outline: none;
-    background-color: $grayish-purplish-red;
-    opacity: 0.15;
+    background-color: $white-antique;
     border-radius: 21px;
   }
 
@@ -265,13 +303,4 @@
   @media (max-width: $desktop) {
     margin-bottom: 21px;
   }
-}
-
-.header--menu button:hover,
-.header--menu button:focus,
-.header--menu input:hover,
-.header--menu input:focus,
-.header--menu a[href]:hover,
-.header--menu a[href]:focus {
-  opacity: 0.5;
 }

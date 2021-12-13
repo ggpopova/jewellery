@@ -99,6 +99,7 @@
   color: $basic-background;
   background-color: $background-black;
   border: $background-black;
+  cursor: pointer;
 
   &:hover,
   &:focus,
@@ -120,6 +121,7 @@
   line-height: 130%;
   border: none;
   color: $basic-background;
+  cursor: pointer;
 
   &:hover,
   &:focus,
@@ -175,6 +177,7 @@
   font-size: 16px;
   line-height: 130%;
   color: $basic-background;
+  cursor: pointer;
 
   &:hover,
   &:focus,

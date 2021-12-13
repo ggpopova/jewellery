@@ -28,10 +28,10 @@
               <svg width="14" height="14" viewBox="0 0 14 14">
                 <use xlink:href="img/sprite.svg#icon-magnifier"></use>
               </svg>
+              <input type="search" name="search" id="usersearch" placeholder="Type here to search">
             </label>
-            <input type="search" name="search" id="usersearch" placeholder="Type here to search">
           </form>
-          <a class="header__logo logo" href="index.html">
+          <a class="header__logo logo">
             <svg width="66" height="66" viewBox="0 0 66 66">
               <use xlink:href="img/sprite.svg#icon-logo"></use>
             </svg>
@@ -55,8 +55,8 @@
               <svg width="14" height="14" viewBox="0 0 14 14">
                 <use xlink:href="img/sprite.svg#icon-magnifier"></use>
               </svg>
+              <input type="search" name="search" id="mysearch" placeholder="Type here to search">
             </label>
-            <input type="search" name="search" id="mysearch" placeholder="Type here to search">
           </form>
           <ul class="navbar__list nav-list">
             <li class="nav-list__item">
@@ -103,22 +103,11 @@
     <section class="new container" id="new">
       <h2>New In</h2>
       <a class="new__shop" href="#">Shop Now</a>
-      <div class="new__wrapper container">
-        <button class="new__btn" type="button" aria-label="new button">
-          <svg width="30" height="11" viewBox="0 0 30 11">
-            <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
-        <button class="new__btn" type="button" aria-label="new button">
-          <svg width="30" height="11" viewBox="0 0 30 11">
-            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="new__block container">
-        <ul class="new__list">
-          <li class="new__item">
-            <a href="#">
+      <div class="slider">
+        <button class="slider__button slider__button--bwrd" type="button">Предыдущие</button>
+        <ul class="slider__list">
+          <li class="slider__item">
+            <a class="slider__link" href="#">
               <picture>
                 <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-index@1x.webp 1x, img/purple-gemstone-necklace-index@2x.webp 2x">
@@ -135,10 +124,11 @@
               </picture>
               <h3>Necklace with amethyst</h3>
               <p>&#36; 145</p>
+
             </a>
           </li>
-          <li class="new__item">
-            <a href="#">
+          <li class="slider__item">
+            <a class="slider__link" href="#">
               <picture>
                 <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/layered-choker-necklace@1x.webp 1x, img/layered-choker-necklace@2x.webp 2x">
@@ -157,8 +147,8 @@
               <p>&#36; 115</p>
             </a>
           </li>
-          <li class="new__item">
-            <a href="#">
+          <li class="slider__item">
+            <a class="slider__link" href="#">
               <picture>
                 <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
@@ -171,8 +161,120 @@
               <p>&#36; 215</p>
             </a>
           </li>
-          <li class="new__item">
-            <a href="#">
+          <li class="slider__item">
+            <a class="slider__link" href="#">
+              <picture>
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.jpg 1x, img/galaxy-earrings@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </li>
+          <li class="slider__item">
+            <a class="slider__link" href="#">
+              <picture>
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.jpg 1x, img/galaxy-earrings@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </li>
+          <li class="slider__item">
+            <a class="slider__link" href="#">
+              <picture>
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.jpg 1x, img/galaxy-earrings@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </li>
+          <li class="slider__item">
+            <a class="slider__link" href="#">
+              <picture>
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.jpg 1x, img/galaxy-earrings@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </li>
+          <li class="slider__item">
+            <a class="slider__link" href="#">
+              <picture>
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.jpg 1x, img/galaxy-earrings@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </li>
+          <li class="slider__item">
+            <a class="slider__link" href="#">
+              <picture>
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.jpg 1x, img/galaxy-earrings@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </li>
+          <li class="slider__item">
+            <a class="slider__link" href="#">
+              <picture>
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.jpg 1x, img/galaxy-earrings@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </li>
+          <li class="slider__item">
+            <a class="slider__link" href="#">
+              <picture>
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.jpg 1x, img/galaxy-earrings@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </li>
+          <li class="slider__item">
+            <a class="slider__link" href="#">
               <picture>
                 <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
@@ -186,6 +288,7 @@
             </a>
           </li>
         </ul>
+        <button class="slider__button slider__button--frwd" type="button">Следующие</button>
       </div>
       <div class="pagination">
         <ul class="pagination__list pagination__list--desk">

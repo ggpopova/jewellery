@@ -27,8 +27,8 @@
                 <svg width="14" height="14" viewBox="0 0 14 14">
                   <use xlink:href="img/sprite.svg#icon-magnifier"></use>
                 </svg>
+                <input type="search" name="search" id="usersearch" placeholder="Type here to search">
               </label>
-              <input type="search" name="search" id="usersearch" placeholder="Type here to search">
             </form>
             <a class="header__logo logo" href="index.html">
               <svg width="66" height="66" viewBox="0 0 66 66">
@@ -54,8 +54,8 @@
                 <svg width="14" height="14" viewBox="0 0 14 14">
                   <use xlink:href="img/sprite.svg#icon-magnifier"></use>
                 </svg>
+                <input type="search" name="search" id="mysearch" placeholder="Type here to search">
               </label>
-              <input type="search" name="search" id="mysearch" placeholder="Type here to search">
             </form>
             <ul class="navbar__list nav-list">
               <li class="nav-list__item">
@@ -105,8 +105,9 @@
     <div class="catalog-wrap">
       <section class="catalog container">
         <div class="filter">
-          <button class="filter__close" type="button" aria-label="filter close button" tabindex="16">
+          <button class="filter__close" type="button" aria-label="filter close button">
           </button>
+          <form class="filter__form" action="https://echo.htmlacademy.ru/" method="POST">
             <div class="filter__block">
               <details class="filter__wrapper" open>
                 <summary>Product</summary>
@@ -120,7 +121,7 @@
                       <label class="filter-checkbox-label" for="product-2">Chokers</label>
                     </li>
                     <li class="filter__item">
-                      <input class="filter-checkbox-input" name="product-3" type="checkbox" id="product-3" checked>
+                      <input tabindex="1" class="filter-checkbox-input" name="product-3" type="checkbox" id="product-3" checked>
                       <label class="filter-checkbox-label" for="product-3">Rings</label>
                     </li>
                     <li class="filter__item">
@@ -129,7 +130,6 @@
                     </li>
                   </ul>
               </details>
-
               <details class="filter__wrapper">
                 <summary>Material</summary>
                 <ul class="filter__list">
@@ -143,7 +143,6 @@
                   </li>
                 </ul>
               </details>
-
               <details class="filter__wrapper">
                 <summary>Collection</summary>
                 <ul class="filter__list">
@@ -178,12 +177,12 @@
                 </div>
               </details>
             </div>
-              <div class="filter-btn filter-btn--open">
-                <button class="filter-btn__open filter-btn__open--apply" type="button" aria-label="Filter button">Apply</button>
-                <button class="filter-btn__open filter-btn__open--clear" type="button" aria-label="Filter button">Clear All</button>
-              </div>
-
-          </div>
+            <div class="filter-btn filter-btn--open">
+              <button class="filter-btn__open filter-btn__open--apply" type="button" aria-label="Filter button">Apply</button>
+              <button class="filter-btn__open filter-btn__open--clear" type="reset" aria-label="Filter button">Clear All</button>
+            </div>
+          </form>
+        </div>
         <div class="product">
           <div class="product__block">
             <ul class="product__list">
@@ -537,7 +536,5 @@
         </nav>
       </section>
     </footer>
-
   <script src="js/script.min.js"></script>
-
 </body>
