@@ -1,0 +1,134 @@
+.range-filter {
+  width: 200px;
+
+  @media (max-width: $desktop) {
+    width: 100%;
+  }
+
+  @media (max-width: $tablet) {
+    width: 90%;
+  }
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 7px;
+  padding-top: 27px;
+
+  @media (max-width: $desktop) {
+    padding-top: 37px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 33px;
+    margin-bottom: 9px;
+  }
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: $pearl-white;
+}
+
+.range-controls .bar {
+  width: 101px;
+  margin-left: 54px;
+  height: 2px;
+  background-color: $light-gray-red;
+
+  @media (max-width: $desktop) {
+    width: 188px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 120px;
+    margin-left: 48px;
+  }
+}
+
+.bar {
+  width: 30%;
+  background-color: $pearl-white;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  background-color: $light-gray-red;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+
+  @media (max-width: $desktop) {
+    top: 30px;
+  }
+
+  @media (max-width: $tablet) {
+    top: 27px;
+  }
+}
+
+.range-controls .toggle-min {
+  left: 46px;
+
+  @media (max-width: $desktop) {
+    left: 53px;
+    width: 17px;
+    height: 17px;
+  }
+
+  @media (max-width: $tablet) {
+    left: 31px;
+  }
+}
+
+.range-controls .toggle-max {
+  left: 152px;
+
+  @media (max-width: $desktop) {
+    left: 228px;
+  }
+
+  @media (max-width: $tablet) {
+    left: 168px;
+  }
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 157px;
+  margin: 0 auto;
+  margin-left: 28px;
+  font-weight: 500;
+
+  @media (max-width: $desktop) {
+    width: 237px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 187px;
+    margin-left: 14px;
+  }
+}
+
+.price-controls input {
+  width: 50px;
+  height: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  border: none;
+
+  @media (max-width: $desktop) {
+    font-size: 16px;
+  }
+}
+
+.hyphen {
+  margin: auto;
+}

@@ -36,6 +36,7 @@
 .product__item img {
   max-height: 272px;
   margin-bottom: 16px;
+  object-fit: cover;
   cursor: pointer;
 
   &:hover,

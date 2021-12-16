@@ -7,41 +7,29 @@
   min-height: 463px;
   margin: 0 auto 119px;
   padding: 0;
-  background-image: url("../img/promo-main@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url(".../img/promo-main@2x.jpg");
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background-color: $brownish-gray;
-    z-index: -1;
-  }
+  height: 100%;
+  width: 100%;
+  background-color: $brownish-gray;
 
   @media (max-width: $desktop) {
     margin-bottom: 69px;
-    background-image: url("../img/promo-main-tab@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-main-tab@2x.jpg");
-    }
   }
 
   @media (max-width: $tablet) {
     margin-bottom: 59px;
-    background-image: url("../img/promo-main-mob@1x.jpg");
+  }
+}
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-main-mob@2x.jpg");
-    }
+.promo img {
+  position: absolute;
+  max-height: 463px;
+  min-height: 463px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
+
+  @media (max-width: $desktop) {
+    height: auto;
   }
 }
 
@@ -85,4 +73,61 @@
     padding-right: 22px;
     font-size: 34px;
   }
+}
+
+.promo--catalog {
+  position: relative;
+  min-height: 261px;
+  margin: 0 auto 80px;
+  padding: 0;
+
+  @media (max-width: $desktop) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.promo--catalog img {
+  position: absolute;
+  max-height: 261px;
+  min-height: 261px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
+
+  @media (max-width: $desktop) {
+    height: auto;
+  }
+}
+
+.promo--catalog h2,
+.promo--catalog p {
+  padding-left: 24px;
+  padding-right: 14px;
+  text-align: center;
+}
+
+.promo--catalog h2 {
+  margin-bottom: 4px;
+  padding-top: 91px;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+
+  @media (max-width: $desktop) {
+    padding-top: 90px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 79px;
+  }
+}
+
+.promo--catalog p {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
 }

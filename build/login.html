@@ -2,9 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewellery store</title>
   <meta name="description" content="Mark the moments with exquisite styles made to be cherished forever.">
-  <link href="css/style.min.css" rel="stylesheet">
   <link rel="preload" href="fonts/cormorant-garamond-v10-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/cormorant-garamond-v10-latin-500italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -13,85 +12,85 @@
   <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-  <title>Jewellery store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
-
-    <div class="header-cover header-z-index">
-      <header class="header header--menu container">
-        <div class="header__wrapper">
-          <button class="header__btn burger-btn" type="button" aria-label="menu button">
-          </button>
-          <form class="header__search search-form" action="#" method="post">
-            <label for="usersearch">
-              <svg width="14" height="14">
-                <use xlink:href="img/sprite.svg#icon-magnifier"></use>
-              </svg>
-              <input type="search" name="search" id="usersearch" placeholder="Type here to search">
-            </label>
-          </form>
-          <a class="header__logo logo" href="index.html">
-            <svg width="66" height="66" viewBox="0 0 14 14">
-              <use xlink:href="img/sprite.svg#icon-logo"></use>
-            </svg>
-          </a>
-          <div class="header__link-wrapper user-link">
-            <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
-            <a class="user-link__item cart-link cart-link--menu" href="#" aria-label="cart link">
-              <div>
-                Cart&nbsp;
-                <span>0</span>
-              </div>
-              <svg width="20" height="18">
-                <use xlink:href="img/sprite.svg#icon-email"></use>
-              </svg>
-            </a>
+  <header class="header-cover header-z-index">
+    <div class="header header--menu container">
+    <div class="header__wrapper">
+      <button class="header__btn burger-btn" type="button" aria-label="menu button">
+      </button>
+      <form class="header__search search-form" action="#" method="post">
+        <label for="usersearch">
+          <svg width="14" height="14" viewBox="0 0 14 14">
+            <use xlink:href="img/sprite.svg#icon-magnifier"></use>
+          </svg>
+          <input type="search" name="search" id="usersearch" placeholder="Type here to search">
+        </label>
+      </form>
+      <a class="header__logo logo" href="index.html">
+        <svg width="66" height="66" viewBox="0 0 66 66">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <div class="header__link-wrapper user-link">
+        <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
+        <a class="user-link__item cart-link cart-link--menu" href="#" aria-label="cart link">
+          <div>
+            Cart&nbsp;
+            <span>0</span>
           </div>
-        </div>
-        <nav class="header__navbar navbar navbar--menu">
-          <form class="header__search search-form" action="#" method="post">
-            <label for="mysearch">
-              <svg width="14" height="14" viewBox="0 0 14 14">
-                <use xlink:href="img/sprite.svg#icon-magnifier"></use>
-              </svg>
-              <input type="search" name="search" id="mysearch" placeholder="Type here to search">
-            </label>
-          </form>
-          <ul class="navbar__list nav-list nav-list--login">
-            <li class="nav-list__item">
-              <a href="#new">What’s new</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="catalog.html">Chokers</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="catalog.html">Necklaces</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="catalog.html">Rings</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="catalog.html">Earrings</a>
-            </li>
-          </ul>
-          <ul class="navbar__list expanded-nav-list">
-            <li class="expanded-nav-list__item">
-              <a href="#">About CH</a>
-            </li>
-            <li class="expanded-nav-list__item">
-              <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
-            </li>
-            <li class="expanded-nav-list__item">
-              <a href="#">Contact Us</a>
-            </li>
-            <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
-              <a href="login.html" target="_blank" aria-label="login form link">Login</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+          <svg width="20" height="18" viewBox="0 0 20 18">
+            <use xlink:href="img/sprite.svg#icon-email"></use>
+          </svg>
+        </a>
+      </div>
     </div>
+    <nav class="header__navbar navbar navbar--menu">
+      <form class="header__search search-form" action="#" method="post">
+        <label for="mysearch">
+          <svg width="14" height="14" viewBox="0 0 14 14">
+            <use xlink:href="img/sprite.svg#icon-magnifier"></use>
+          </svg>
+          <input type="search" name="search" id="mysearch" placeholder="Type here to search">
+        </label>
+      </form>
+      <ul class="navbar__list nav-list">
+        <li class="nav-list__item">
+          <a href="#new">What’s new</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="catalog.html">Chokers</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="catalog.html">Necklaces</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="catalog.html">Rings</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="catalog.html">Earrings</a>
+        </li>
+      </ul>
+      <ul class="navbar__list expanded-nav-list">
+        <li class="expanded-nav-list__item">
+          <a href="catalog.html">About CH</a>
+        </li>
+        <li class="expanded-nav-list__item">
+          <a href="catalog.html">Stores&nbsp;&#38;&nbsp;Hours</a>
+        </li>
+        <li class="expanded-nav-list__item">
+          <a href="catalog.html">Contact Us</a>
+        </li>
+        <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
+          <a href="login.html" target="_blank" aria-label="login form link">Login</a>
+        </li>
+      </ul>
+    </nav>
+    </div>
+  </header>
 
   <main class="page-main page-main--login">
     <h1 class="visually-hidden">Jewellery store login form</h1>

@@ -54,3 +54,36 @@
     padding-left: 29px;
   }
 }
+
+.filter--opened .filter {
+  @media (max-width: $desktop) {
+    display: block;
+    position: absolute;
+    min-width: 422px;
+    background-color: $basic-background;
+    box-shadow: 0 5px 32px $light-gray;
+  }
+
+  @media (max-width: $tablet) {
+    position: static;
+    min-width: 270px;
+    margin-bottom: 47px;
+  }
+}
+
+.filter--opened .filter__block {
+  @media (max-width: $desktop) {
+    margin-bottom: 41px;
+    border: none;
+    border-bottom: 1px solid $light-gray-red;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 28px;
+    border: none;
+  }
+}
+
+.filter__close .filter {
+  display: none;
+}

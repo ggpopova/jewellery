@@ -96,7 +96,6 @@ const sliderButtonBwrdClickHandler = () => {
 };
 
 const sliderButtonFwrdClickHandler = () => {
-    console.log(window.innerWidth);
 
     if (window.innerWidth > 768) {
         if (currentDesktopSliderPage === overallDesktopSliderPages) {
@@ -139,4 +138,3 @@ sliderButtonBwrd?.addEventListener(`click`, sliderButtonBwrdClickHandler);
 
 sliderButtonFwrd?.addEventListener(`click`, sliderButtonFwrdClickHandler);
 
-console.log(sliderItems);

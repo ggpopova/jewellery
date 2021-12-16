@@ -225,21 +225,22 @@ summary::-webkit-details-marker {
   }
 }
 
-.filter-checkbox-input {
+.filter__item input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.filter-checkbox-input + label {
+.filter__item input + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
-.filter-checkbox-input + label::before {
+.filter__item input + label::before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 15px;
   height: 15px;
   flex-shrink: 0;
@@ -256,195 +257,27 @@ summary::-webkit-details-marker {
   }
 }
 
-.filter-checkbox-input:not(:disabled):not(:checked) + label:hover::before {
+.filter__item input:not(:disabled):not(:checked) + label:hover::before {
   border-color: $light-gray-red;
 }
 
-.filter-checkbox-input:not(:disabled):active + label::before {
+.filter__item input:not(:disabled):active + label::before {
   background-color: $light-gray-red;
 }
 
-.filter-checkbox-input:focus:not(:checked) + label::before {
+.filter__item input:focus:not(:checked) + label::before {
   border-color: $light-gray-red;
 }
 
-.filter-checkbox-input:checked + label::before {
+.filter__item input:checked + label::before {
   border-color: $light-gray-red;
   background-color: $light-gray-red;
 }
 
-.filter-checkbox-input:disabled + label::before {
+.filter__item input:disabled + label::before {
   background-color: $light-gray-red;
 }
 
-.filter-checkbox-input:focus-visible + label {
+.filter__item input:focus-visible + label {
   outline: 1px solid $light-gray;
-}
-
-.range-filter {
-  width: 200px;
-
-  @media (max-width: $desktop) {
-    width: 100%;
-  }
-
-  @media (max-width: $tablet) {
-    width: 90%;
-  }
-}
-
-.range-controls {
-  position: relative;
-  margin-bottom: 7px;
-  padding-top: 27px;
-
-  @media (max-width: $desktop) {
-    padding-top: 37px;
-  }
-
-  @media (max-width: $tablet) {
-    padding-top: 33px;
-    margin-bottom: 9px;
-  }
-}
-
-.range-controls .scale {
-  height: 2px;
-  background-color: $pearl-white;
-}
-
-.range-controls .bar {
-  width: 101px;
-  margin-left: 54px;
-  height: 2px;
-  background-color: $light-gray-red;
-
-  @media (max-width: $desktop) {
-    width: 188px;
-  }
-
-  @media (max-width: $tablet) {
-    width: 120px;
-    margin-left: 48px;
-  }
-}
-
-.bar {
-  width: 30%;
-  background-color: $pearl-white;
-}
-
-.range-controls .toggle {
-  position: absolute;
-  top: 20px;
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  background-color: $light-gray-red;
-  border-radius: 50%;
-  cursor: pointer;
-  box-sizing: content-box;
-
-  @media (max-width: $desktop) {
-    top: 30px;
-  }
-
-  @media (max-width: $tablet) {
-    top: 27px;
-  }
-}
-
-.range-controls .toggle-min {
-  left: 46px;
-
-  @media (max-width: $desktop) {
-    left: 53px;
-    width: 17px;
-    height: 17px;
-  }
-
-  @media (max-width: $tablet) {
-    left: 31px;
-  }
-}
-
-.range-controls .toggle-max {
-  left: 152px;
-
-  @media (max-width: $desktop) {
-    left: 228px;
-  }
-
-  @media (max-width: $tablet) {
-    left: 168px;
-  }
-}
-
-.price-controls {
-  display: flex;
-  justify-content: space-between;
-  width: 157px;
-  margin: 0 auto;
-  margin-left: 28px;
-  font-weight: 500;
-
-  @media (max-width: $desktop) {
-    width: 237px;
-  }
-
-  @media (max-width: $tablet) {
-    width: 187px;
-    margin-left: 14px;
-  }
-}
-
-.price-controls input {
-  width: 50px;
-  height: 30px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 130%;
-  text-align: center;
-  border: none;
-
-  @media (max-width: $desktop) {
-    font-size: 16px;
-  }
-}
-
-.hyphen {
-  margin: auto;
-}
-
-.filter--opened .filter {
-  @media (max-width: $desktop) {
-    display: block;
-    position: absolute;
-    min-width: 422px;
-    background-color: $basic-background;
-    box-shadow: 0 5px 32px $light-gray;
-  }
-
-  @media (max-width: $tablet) {
-    position: static;
-    min-width: 270px;
-    margin-bottom: 47px;
-  }
-}
-
-.filter--opened .filter__block {
-  @media (max-width: $desktop) {
-    margin-bottom: 41px;
-    border: none;
-    border-bottom: 1px solid $light-gray-red;
-  }
-
-  @media (max-width: $tablet) {
-    margin-bottom: 28px;
-    border: none;
-  }
-}
-
-.filter__close .filter {
-  display: none;
 }
