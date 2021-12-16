@@ -1,6 +1,6 @@
 "use strict";
 // Menu burger
-document.querySelector(`.burger-btn`).addEventListener(`click`, () => {
+document.querySelector(`.burger-btn`)?.addEventListener(`click`, () => {
   document.querySelector(`.header-cover`).classList.toggle(`header--opened`)
 })
 
@@ -13,7 +13,7 @@ document.querySelector(`.filter__close`)?.addEventListener(`click`, () => {
   document.querySelector(`.catalog-wrap`).classList.remove(`filter--opened`);
 })
 
-document.querySelector(`.login__close`).addEventListener(`click`, () => {
+document.querySelector(`.login__close`)?.addEventListener(`click`, () => {
   document.body.classList.toggle(`login--close`)
 })
 
@@ -24,23 +24,23 @@ const emailInput = document.querySelector(`#email`);
 const loginForm = document.querySelector(`.login__form`);
 
 
-if (localStorage.getItem(`email`)) {
+if (localStorage.getItem(`email`) && emailInput) {
   emailInput.value = localStorage.getItem(`email`);
 }
 
 if (emailInput) {
-  emailInput.addEventListener(`change`, () => {
+  emailInput?.addEventListener(`change`, () => {
     localStorage.setItem(`email`, emailInput.value);
   });
 }
 
 
 //ESC
-document.addEventListener('keydown', function (e) {
-  if (event.keyCode == 27) {
-    window.close();
-  }
-});
+// document.addEventListener('keydown', function (evt) {
+//   if (evt.keyCode == 27) {
+//     window.close();
+//   }
+// });
 
 // Slider
 const DEFAULT_SLIDER_PAGE = 1;

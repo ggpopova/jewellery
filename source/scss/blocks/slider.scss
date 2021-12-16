@@ -93,6 +93,10 @@
   }
 }
 
+.slider__item--hidden {
+  display: none;
+}
+
 .slider__link {
   display: flex;
   flex-direction: column;
