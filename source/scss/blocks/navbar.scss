@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  min-width: 508px;
+  min-width: 510px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 12px;
+  padding-left: 10px;
 
   @media (max-width: $desktop) {
     flex-direction: column;
@@ -25,4 +25,24 @@
   @media (max-width: $tablet) {
     margin-bottom: 11px;
   }
+}
+
+.nav-list__item {
+  margin-right: 20px;
+
+  @media (max-width: $desktop) {
+    margin-right: 0;
+  }
+}
+
+.nav-list__item:nth-child(2n) {
+  margin-right: 30px;
+
+  @media (max-width: $desktop) {
+    margin-right: 0;
+  }
+}
+
+.nav-list__item:nth-child(5n) {
+  margin-right: 0;
 }

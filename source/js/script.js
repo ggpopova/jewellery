@@ -137,4 +137,3 @@ const sliderButtonFwrdClickHandler = () => {
 sliderButtonBwrd?.addEventListener(`click`, sliderButtonBwrdClickHandler);
 
 sliderButtonFwrd?.addEventListener(`click`, sliderButtonFwrdClickHandler);
-

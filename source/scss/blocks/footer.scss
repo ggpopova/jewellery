@@ -55,16 +55,15 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  max-width: 500px;
+  width: 100%;
   padding-bottom: 7px;
   border-bottom: 1px solid $basic-background;
 
   @media (max-width: $desktop) {
-    max-width: 560px;
+    max-width: auto;
   }
 
   @media (max-width: $tablet) {
-    max-width: 290px;
     padding-bottom: 5px;
   }
 }

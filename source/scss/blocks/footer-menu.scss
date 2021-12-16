@@ -26,6 +26,7 @@
   @include list-style;
 
   display: grid;
+  align-content: start;
   row-gap: 20px;
 }
 

@@ -136,11 +136,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
   padding: 5px;
   background-color: $pearl-white;
   text-align: center;
+  overflow: auto;
 }
 
 .blog__block--list .blog__text-wrapper {

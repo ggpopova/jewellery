@@ -1,26 +1,31 @@
 .range-filter {
   width: 200px;
+  padding-bottom: 11px;
 
   @media (max-width: $desktop) {
     width: 100%;
+    padding-bottom: 29px;
   }
 
   @media (max-width: $tablet) {
     width: 90%;
+    padding-bottom: 21px;
   }
 }
 
 .range-controls {
   position: relative;
   margin-bottom: 7px;
-  padding-top: 27px;
+  padding-top: 0;
+  padding-left: 22px;
 
   @media (max-width: $desktop) {
-    padding-top: 37px;
+    padding-left: 34px;
+    padding-right: 84px;
   }
 
   @media (max-width: $tablet) {
-    padding-top: 33px;
+    padding-top: 10px;
     margin-bottom: 9px;
   }
 }
@@ -32,28 +37,29 @@
 
 .range-controls .bar {
   width: 101px;
-  margin-left: 54px;
+  margin-left: 55px;
   height: 2px;
   background-color: $light-gray-red;
 
   @media (max-width: $desktop) {
-    width: 188px;
+    width: 181px;
   }
 
   @media (max-width: $tablet) {
-    width: 120px;
-    margin-left: 48px;
+    width: 122px;
+    margin-left: 38px;
   }
 }
 
 .bar {
   width: 30%;
+  margin-left: 35px;
   background-color: $pearl-white;
 }
 
 .range-controls .toggle {
   position: absolute;
-  top: 20px;
+  top: -6;
   width: 15px;
   height: 15px;
   padding: 0;
@@ -72,28 +78,32 @@
 }
 
 .range-controls .toggle-min {
-  left: 46px;
+  top: -7px;
+  left: 68px;
 
   @media (max-width: $desktop) {
-    left: 53px;
+    left: 75px;
     width: 17px;
     height: 17px;
   }
 
   @media (max-width: $tablet) {
-    left: 31px;
+    top: 4px;
+    left: 54px;
   }
 }
 
 .range-controls .toggle-max {
-  left: 152px;
+  top: -7px;
+  left: 173px;
 
   @media (max-width: $desktop) {
-    left: 228px;
+    left: 254px;
   }
 
   @media (max-width: $tablet) {
-    left: 168px;
+    top: 4px;
+    left: 191px;
   }
 }
 
@@ -102,16 +112,17 @@
   justify-content: space-between;
   width: 157px;
   margin: 0 auto;
-  margin-left: 28px;
+  margin-left: 50px;
   font-weight: 500;
 
   @media (max-width: $desktop) {
-    width: 237px;
+    width: 226px;
+    margin-left: 59px;
   }
 
   @media (max-width: $tablet) {
     width: 187px;
-    margin-left: 14px;
+    margin-left: 38px;
   }
 }
 

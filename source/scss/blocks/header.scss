@@ -15,7 +15,12 @@
     z-index: 999;
     width: 100%;
     height: 100%;
+    margin-bottom: 25px;
     background-color: $light-gray-red;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 10px;
   }
 }
 
@@ -40,17 +45,6 @@
     margin-bottom: 0;
     padding-top: 21px;
     padding-bottom: 19px;
-  }
-}
-
-.header--opened .header {
-  @media (max-width: $desktop) {
-    max-width: 100%;
-    margin-bottom: 25px;
-  }
-
-  @media (max-width: $tablet) {
-    margin-bottom: 10px;
   }
 }
 
@@ -145,12 +139,32 @@
 .logo svg {
   @media (max-width: $tablet) {
     height: 52px;
+
+    &:hover {
+      opacity: 0.5;
+      color: $basic-background;
+    }
+
+    &:active {
+      opacity: 1;
+      color: $basic-background;
+    }
   }
 }
 
 .header--opened .logo svg {
   @media (max-width: $desktop) {
     color: $basic-background;
+
+    &:hover {
+      opacity: 0.5;
+      color: $basic-background;
+    }
+
+    &:active {
+      opacity: 1;
+      color: $basic-background;
+    }
   }
 }
 
@@ -189,16 +203,24 @@
 .header__navbar .search-form input[type="search"] {
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.5;
-  }
 
+  &:focus,
   &:active {
     opacity: 1;
   }
 
   &:focus-visible {
     outline: 1px auto;
+  }
+}
+
+.header__search svg {
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
   }
 }
 
@@ -260,6 +282,16 @@
     height: 16px;
     margin: 12px;
     color: $basic-background;
+
+    &:hover {
+      opacity: 0.5;
+      color: $basic-background;
+    }
+
+    &:active {
+      opacity: 1;
+      color: $basic-background;
+    }
   }
 }
 
