@@ -40,44 +40,16 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 43px;
+
   outline: 1px solid $light-gray-red;
 
   @media (max-width: $desktop) {
     min-height: 100px;
-    padding: 45px 57px 44px 43px;
   }
 
   @media (max-width: $tablet) {
     min-height: 83px;
-    padding: 17px 19px 19px 19px;
     font-size: 38px;
-  }
-}
-
-.faq__item--country {
-  padding-bottom: 37px;
-
-  @media (max-width: $desktop) {
-    padding-bottom: 17px;
-  }
-
-  @media (max-width: $tablet) {
-    padding-top: 20px;
-    padding-bottom: 5px;
-  }
-}
-
-.faq__item--payment,
-.faq__item--return {
-  padding-bottom: 36px;
-
-  @media (max-width: $desktop) {
-    padding-bottom: 17px;
-  }
-
-  @media (max-width: $tablet) {
-    padding-bottom: 5px;
   }
 }
 
@@ -99,15 +71,15 @@
 .faq__item summary {
   position: relative;
   display: flex;
-  margin-bottom: 8px;
+  padding: 43px;
   font-weight: 500;
   font-size: 18px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 1px;
-    right: 3px;
+    top: 46px;
+    right: 49px;
     width: 19px;
     height: 17px;
     background-image: url("../img/icon-arrow-down.svg");
@@ -118,12 +90,11 @@
   }
 
   @media (max-width: $desktop) {
-    margin-bottom: 26px;
-    padding-right: 20px;
+    padding: 45px 20px 44px 50px;
 
     &::before {
-      top: 4px;
-      right: -11px;
+      top: 50px;
+      right: 47px;
       width: 28px;
       height: 14px;
       background-size: 28px 14px;
@@ -131,14 +102,12 @@
   }
 
   @media (max-width: $tablet) {
-    margin-bottom: 16px;
-    padding-left: 5px;
-    padding-right: 26px;
+    padding: 17px 50px 26px 25px;
     font-size: 16px;
 
     &::before {
-      top: 9px;
-      right: 8px;
+      top: 25px;
+      right: 21px;
       width: 20px;
       height: 13px;
       background-size: 21px 13px;
@@ -152,14 +121,16 @@ summary::-webkit-details-marker {
 
 .faq__item[open] > summary {
   max-height: 160px;
+  padding-bottom: 0;
+  margin-bottom: 8px;
 
   &::before {
     content: "";
     position: absolute;
+    top: 46px;
+    right: 49px;
     width: 19px;
     height: 17px;
-    top: 1px;
-    right: 3px;
     background-size: 19px 17px;
     transform: rotate(180deg);
   }
@@ -169,8 +140,8 @@ summary::-webkit-details-marker {
     padding-right: 20px;
 
     &::before {
-      top: 4px;
-      right: -11px;
+      top: 50px;
+      right: 47px;
       width: 28px;
       height: 14px;
       background-size: 28px 14px;
@@ -179,33 +150,54 @@ summary::-webkit-details-marker {
 
   @media (max-width: $tablet) {
     margin-bottom: 16px;
-    padding-left: 5px;
+    padding-left: 25px;
 
-    padding-right: 26px;
+    padding-right: 50px;
     font-size: 16px;
 
     &::before {
-      top: 9px;
-      right: 8px;
+      top: 25px;
+      right: 21px;
       width: 21px;
       height: 13px;
       background-size: 21px 13px;
     }
   }
+
+  @media (max-width: $tablet-min) {
+    padding-right: 44px;
+  }
+}
+
+.faq__item--country summary,
+.faq__item--payment summary {
+  @media (max-width: $tablet) {
+    padding-bottom: 21px;
+  }
+}
+
+.faq__item--return summary {
+  @media (max-width: $tablet) {
+    padding-bottom: 20px;
+  }
 }
 
 .faq__item p {
-  max-width: 527px;
-  padding-left: 7px;
+  max-width: 597px;
+  padding: 0 43px 43px 50px;
   font-weight: normal;
   font-size: 16px;
 
   @media (max-width: $desktop) {
     max-width: 100%;
+    padding-left: 50px;
+    padding-right: 95px;
   }
 
   @media (max-width: $tablet) {
-    padding-right: 41px;
+    padding-left: 26px;
+    padding-right: 57px;
+    padding-bottom: 21px;
     font-size: 14px;
   }
 }
