@@ -40,13 +40,16 @@
 
   cursor: pointer;
 
+  &:active {
+    opacity: 1;
+  }
+
   &:hover {
     opacity: 0.5;
   }
 
-  &:focus,
-  &:active {
-    opacity: 1;
+  &:focus-visible {
+    outline: 1px auto;
   }
 
   @media (max-width: $desktop) {
@@ -111,10 +114,16 @@
   object-fit: cover;
   cursor: pointer;
 
-  &:hover,
-  &:focus,
   &:active {
+    opacity: 1;
+  }
+
+  &:hover {
     opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 1px auto;
   }
 
   @media (max-width: $tablet) {
@@ -129,10 +138,16 @@
   text-align: center;
   cursor: pointer;
 
-  &:hover,
-  &:focus,
   &:active {
+    opacity: 1;
+  }
+
+  &:hover {
     opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 1px auto;
   }
 }
 

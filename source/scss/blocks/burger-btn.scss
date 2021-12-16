@@ -38,6 +38,18 @@
   }
 }
 
-.burger-btn--js:hover {
+.burger-btn--js {
   cursor: pointer;
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 1px auto;
+  }
 }

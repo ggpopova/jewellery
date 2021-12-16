@@ -261,13 +261,13 @@ summary::-webkit-details-marker {
   border-color: $light-gray-red;
 }
 
-.filter__item input:not(:disabled):active + label::before {
-  background-color: $light-gray-red;
-}
+// .filter__item input:not(:disabled):active + label::before {
+//   background-color: $light-gray-red;
+// }
 
-.filter__item input:focus:not(:checked) + label::before {
-  border-color: $light-gray-red;
-}
+// .filter__item input:focus:not(:checked) + label::before {
+//   border-color: $light-gray-red;
+// }
 
 .filter__item input:checked + label::before {
   border-color: $light-gray-red;
@@ -279,5 +279,6 @@ summary::-webkit-details-marker {
 }
 
 .filter__item input:focus-visible + label {
-  outline: 1px solid $light-gray;
+  // outline: -webkit-focus-ring-color auto 1px;
+  outline: 1px auto;
 }

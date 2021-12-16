@@ -166,14 +166,16 @@ input[type="email"],
 input[type="password"] {
   cursor: pointer;
 
-  &:active,
-  &:focus,
-  &:focus-visible {
+  &:active {
     opacity: 1;
   }
 
   &:hover {
     opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 1px auto;
   }
 }
 
@@ -187,10 +189,16 @@ input[type="password"] {
   color: $gray-crayola;
   cursor: pointer;
 
-  &:hover,
-  &:focus,
   &:active {
+    opacity: 1;
+  }
+
+  &:hover {
     opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 1px auto;
   }
 
   @media (max-width: $tablet) {
@@ -206,10 +214,16 @@ input[type="password"] {
   color: $basic-color;
   cursor: pointer;
 
-  &:hover,
-  &:focus,
   &:active {
+    opacity: 1;
+  }
+
+  &:hover {
     opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 1px auto;
   }
 }
 
