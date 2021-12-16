@@ -7,6 +7,8 @@
 @import "mixin.scss";
 @import "button.scss";
 @import "blocks/header.scss";
+@import "blocks/header-z-index.scss";
+@import "blocks/header-cover.scss";
 @import "blocks/promo.scss";
 @import "blocks/new.scss";
 @import "blocks/slider.scss";
@@ -14,8 +16,10 @@
 @import "blocks/faq.scss";
 @import "blocks/gallery.scss";
 @import "blocks/footer.scss";
+@import "blocks/footer-menu.scss";
 @import "blocks/burger-btn.scss";
 @import "blocks/navbar.scss";
+@import "blocks/nav-list.scss";
 @import "blocks/catalog.scss";
 @import "blocks/product.scss";
 @import "blocks/filter.scss";

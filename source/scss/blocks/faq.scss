@@ -152,7 +152,6 @@ summary::-webkit-details-marker {
 
 .faq__item[open] > summary {
   max-height: 160px;
-  overflow: auto;
 
   &::before {
     content: "";

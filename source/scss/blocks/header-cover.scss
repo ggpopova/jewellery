@@ -1,0 +1,18 @@
+.header-cover {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 114px;
+    width: 100%;
+    border-bottom: 1px solid $smoky-white;
+  }
+
+  @media (max-width: $desktop) {
+    &::before {
+      display: none;
+      border-bottom: none;
+    }
+  }
+}
