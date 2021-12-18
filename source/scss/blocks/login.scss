@@ -1,7 +1,20 @@
 .login {
   position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: $light-gray;
+  z-index: 2;
+}
+
+.login__wrapper {
+  position: absolute;
   top: 50%;
   left: 50%;
+  display: none;
   transform: translate(-50%, -50%);
   background: $pearl-white;
   box-shadow: 0 5px 32px $forest-wolf;
@@ -10,8 +23,25 @@
 }
 
 .login--opened {
+  position: fixed;
   display: block;
 }
+
+.login--opened .login,
+.login--opened .login__wrapper {
+  display: block;
+}
+
+
+.login--close {
+  display: none;
+}
+
+.login--close .login,
+.login--close .login__wrapper {
+  display: none;
+}
+
 
 .login__close {
   position: absolute;
@@ -240,6 +270,6 @@ input[type="password"] {
   display: none;
 }
 
-.login--close .header-z-index {
-  z-index: 3;
-}
+// .login--close .header-z-index {
+//   z-index: 3;
+// }

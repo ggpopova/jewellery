@@ -1,48 +1,47 @@
 "use strict";
-// Menu burger
-document.querySelector(`.burger-btn`)?.addEventListener(`click`, () => {
-  document.querySelector(`.header-cover`).classList.toggle(`header--opened`)
-})
 
-// Filter
-document.querySelector(`.filter-btn__open`)?.addEventListener(`click`, () => {
-  document.querySelector(`.catalog-wrap`).classList.add(`filter--opened`);
-})
+// Menu behaviour
 
-document.querySelector(`.filter__close`)?.addEventListener(`click`, () => {
-  document.querySelector(`.catalog-wrap`).classList.remove(`filter--opened`);
-})
+const burgerButton = document.querySelector(`.burger-btn`);
+const headerCover = document.querySelector(`.header-cover`);
 
-document.querySelector(`.login__close`)?.addEventListener(`click`, () => {
-  document.body.classList.toggle(`login--close`)
-})
+const burgerButtonClickHandler = () => {
+  headerCover?.classList.toggle(`header--opened`);
+};
 
+burgerButton?.addEventListener(`click`, burgerButtonClickHandler);
 
-// localStorage
+// Filter behaviour
+
+const filterButton = document.querySelector(`.filter-btn__open`);
+const filterClose = document.querySelector(`.filter__close`);
+const catalogWrap = document.querySelector(`.catalog-wrap`);
+
+const filterButtonClickhandler = () => {
+  catalogWrap?.classList.toggle(`filter--opened`);
+};
+
+filterButton?.addEventListener(`click`, filterButtonClickhandler);
+
+filterClose?.addEventListener(`click`, filterButtonClickhandler);
+
+// localStorage handler
+
 const emailInput = document.querySelector(`#email`);
-
 const loginForm = document.querySelector(`.login__form`);
 
+const emailInputChangeHandler = () => {
+  localStorage.setItem(`email`, emailInput.value);
+};
 
 if (localStorage.getItem(`email`) && emailInput) {
   emailInput.value = localStorage.getItem(`email`);
 }
 
-if (emailInput) {
-  emailInput?.addEventListener(`change`, () => {
-    localStorage.setItem(`email`, emailInput.value);
-  });
-}
+emailInput?.addEventListener(`change`, emailInputChangeHandler);
 
+// Slider handler
 
-//ESC
-// document.addEventListener('keydown', function (evt) {
-//   if (evt.keyCode == 27) {
-//     window.close();
-//   }
-// });
-
-// Slider
 const DEFAULT_SLIDER_PAGE = 1;
 const DESKTOP_SLIDES_PER_PAGE = 4;
 const TABLET_SLIDES_PER_PAGE = 2;
@@ -137,3 +136,36 @@ const sliderButtonFwrdClickHandler = () => {
 sliderButtonBwrd?.addEventListener(`click`, sliderButtonBwrdClickHandler);
 
 sliderButtonFwrd?.addEventListener(`click`, sliderButtonFwrdClickHandler);
+
+// Login handler
+
+const body = document.body;
+const loginLink = document.querySelector(`.login-link-js`);
+const login = document.querySelector(`.login`);
+const loginClose = document.querySelector(`.login__close`);
+
+const loginToggleClickHandler = (evt) => {
+  evt.preventDefault();
+  body.classList.toggle(`modalfull-body--opened-modal`);
+  login?.classList.toggle(`login--opened`);
+};
+
+const documentEscKeydownHandler = (evt) => {
+  if (evt.key === `Escape`) {
+    loginToggleClickHandler(evt);
+  }
+}
+
+const loginLinkClickHandler = (evt) => {
+  loginToggleClickHandler(evt);
+  document.addEventListener(`keydown`, documentEscKeydownHandler);
+};
+
+const loginCloseClickHandler = (evt) => {
+  loginToggleClickHandler(evt);
+  document.removeEventListener(`keydown`, documentEscKeydownHandler);
+};
+
+loginLink?.addEventListener(`click`, loginLinkClickHandler);
+loginClose?.addEventListener(`click`, loginCloseClickHandler);
+
