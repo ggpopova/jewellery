@@ -16,6 +16,7 @@ const imageminJpegtran = require("imagemin-jpegtran");
 const imageminSvgo = require("imagemin-svgo");
 const gulpWebp = require("gulp-webp");
 const terser = require("gulp-terser");
+const concat = require("gulp-concat");
 
 // Обрабатываем код на SASS: составляем карту кода, превращаем его в единый CSS,
 // добавляем префиксы, сжимаем, добавляем суффикс min и записываем в папку build/css
@@ -70,7 +71,7 @@ const reload = done => {
 const watcher = () => {
   gulp.watch(`source/scss/**/*.scss`, gulp.series(styles, reload));
   gulp.watch(`source/*.html`, gulp.series(copy, reload));
-  gulp.watch(`source/js/script.js`, gulp.series(scripts, reload));
+  gulp.watch(`source/js/*.js`, gulp.series(scripts, reload));
 };
 
 // Обрабатываем код на JS: сжимаем,
@@ -78,15 +79,9 @@ const watcher = () => {
 
 const scripts = () => {
   return gulp
-    .src(`source/js/script.js`)
-    .pipe(terser())
-    .pipe(
-      rename({
-        suffix: `.min`
-      })
-    )
+    .src(`source/js/*.js`)
+    .pipe(concat(`script.js`))
     .pipe(gulp.dest(`build/js`))
-    .pipe(sync.stream())
 };
 
 // Создаем единый файл - спрайт - из всех SVG-иконок: склеиваем файлы,
@@ -134,9 +129,9 @@ const build = (done) => gulp.series (
   copy,
   styles,
   scripts,
-  sprite
-  , images,
-  webp
+  webp,
+  sprite,
+  images
 )(done);
 
 exports.build = build;
