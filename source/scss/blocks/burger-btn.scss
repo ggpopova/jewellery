@@ -12,6 +12,7 @@
     margin-right: auto;
     background: transparent;
     border: none;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -22,6 +23,18 @@
       height: 2px;
       background-position: 50% 50%;
       box-shadow: 0 8px 0 0 $basic-color, 0 16px 0 0 $basic-color, 0 24px 0 0 $basic-color;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      outline: 1px auto;
     }
   }
 }
@@ -35,21 +48,5 @@
     &::before {
       box-shadow: 0 8px 0 0 $basic-background, 0 16px 0 0 $basic-background, 0 24px 0 0 $basic-background;
     }
-  }
-}
-
-.burger-btn--js {
-  cursor: pointer;
-
-  &:active {
-    opacity: 1;
-  }
-
-  &:hover {
-    opacity: 0.5;
-  }
-
-  &:focus-visible {
-    outline: 1px auto;
   }
 }

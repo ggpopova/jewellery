@@ -45,16 +45,12 @@
   border-bottom: 1px solid $light-gray-red;
   cursor: pointer;
 
-  &:active {
-    opacity: 1;
-  }
-
   &:hover {
     opacity: 0.5;
   }
 
-  &:focus-visible {
-    outline: 1px auto;
+  &:active {
+    opacity: 1;
   }
 
   @media (max-width: $desktop) {

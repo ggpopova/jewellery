@@ -7,7 +7,6 @@
 @import "mixin.scss";
 @import "button.scss";
 @import "blocks/header.scss";
-@import "blocks/header-z-index.scss";
 @import "blocks/promo.scss";
 @import "blocks/new.scss";
 @import "blocks/slider.scss";
@@ -16,14 +15,14 @@
 @import "blocks/gallery.scss";
 @import "blocks/footer.scss";
 @import "blocks/footer-menu.scss";
+@import "blocks/footer-form.scss";
 @import "blocks/burger-btn.scss";
 @import "blocks/navbar.scss";
 @import "blocks/nav-list.scss";
+@import "blocks/expanded-nav-list.scss";
 @import "blocks/catalog.scss";
 @import "blocks/product.scss";
 @import "blocks/filter.scss";
-@import "blocks/range-filter.scss";
-@import "blocks/filter-btn.scss";
 @import "blocks/pagination.scss";
 @import "blocks/pagination-catalog.scss";
 @import "blocks/footer-catalog.scss";

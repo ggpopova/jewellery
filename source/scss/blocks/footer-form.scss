@@ -1,0 +1,136 @@
+.footer-form {
+  display: grid;
+  grid-template-columns: 500px auto;
+  column-gap: 93px;
+  padding-top: 89px;
+  padding-bottom: 100px;
+  padding-left: 96px;
+  padding-right: 94px;
+
+
+  @media (max-width: $desktop-max) {
+    grid-template-columns: 450px auto;
+    column-gap: 23px;
+    padding-left: 26px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: $desktop) {
+    grid-template-columns: minmax(min-content, auto);
+    grid-template-rows: 1fr auto;
+    row-gap: 45px;
+    padding: 51px 45px;
+  }
+
+  @media (max-width: $tablet) {
+    row-gap: 50px;
+    padding: 48px 15px 56px;
+  }
+}
+
+.footer-form__block h2,
+.footer-form__block p {
+  margin: 0 auto;
+  margin-left: 0;
+  min-width: 413px;
+  max-width: 230px;
+
+  @media (max-width: $desktop) {
+    max-width: 230px;
+  }
+
+  @media (max-width: $tablet) {
+    min-width: 230px;
+  }
+}
+
+.footer-form__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  padding-bottom: 7px;
+  border-bottom: 1px solid $basic-background;
+
+  @media (max-width: $desktop) {
+    max-width: auto;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 5px;
+  }
+}
+
+.footer-form__block h2 {
+  margin-bottom: 9px;
+  font-family: $font-cormorant;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 15px;
+  }
+}
+
+.footer-form__block p {
+  margin-bottom: 46px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  color: $gray-crayola;
+}
+
+.footer-form__form input {
+  width: 69%;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $basic-background;
+  background-color: $background-black;
+  border: $background-black;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.footer-form__form button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 113px;
+  padding: 0;
+  padding-left: 10px;
+  background-color: $background-black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  border: none;
+  color: $basic-background;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 172px;
+  }
+}
+
+.footer-form__form button svg {
+  margin-left: 12px;
+}

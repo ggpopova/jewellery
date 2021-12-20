@@ -2,28 +2,56 @@
 
 // Menu behaviour
 
+const body = document.body;
 const burgerButton = document.querySelector(`.burger-btn`);
 const headerCover = document.querySelector(`.header-cover`);
 
 const burgerButtonClickHandler = () => {
   headerCover?.classList.toggle(`header--opened`);
+  body.classList.toggle(`modalfull-body--opened`);
 };
 
 burgerButton?.addEventListener(`click`, burgerButtonClickHandler);
 
 // Filter behaviour
 
-const filterButton = document.querySelector(`.filter-btn__open`);
+const filterButton = document.querySelector(`.filter__btn--open`);
 const filterClose = document.querySelector(`.filter__close`);
-const catalogWrap = document.querySelector(`.catalog-wrap`);
+const filter = document.querySelector(`.filter`);
+const filterWrapper = document.querySelector(`.filter--opened`);
 
-const filterButtonClickhandler = () => {
-  catalogWrap?.classList.toggle(`filter--opened`);
+const filterToogleClickhandler = (evt) => {
+  evt.preventDefault();
+  body.classList.toggle(`modalfull-body--opened`);
+  filter?.classList.toggle(`filter--opened`);
+};
+
+const filterEscKeydownHandler = (evt) => {
+  if (evt.key === `Escape`) {
+    filterToogleClickhandler(evt);
+  }
+};
+
+const filterButtonClickhandler = (evt) => {
+  filterToogleClickhandler(evt);
+  document.addEventListener(`keydown`, filterEscKeydownHandler);
+  filterWrapper.addEventListener(`click`, filterWrapperClickHandler);
+};
+
+const filterCloseClickhandler = (evt) => {
+  filterToogleClickhandler(evt);
+  document.removeEventListener(`keydown`, filterEscKeydownHandler);
+  filterWrapper.removeEventListener(`click`, filterWrapperClickHandler);
+};
+
+const filterWrapperClickHandler = (evt) => {
+  if (evt.target === filterWrapper) {
+    filterCloseClickhandler(evt);
+  }
 };
 
 filterButton?.addEventListener(`click`, filterButtonClickhandler);
-
-filterClose?.addEventListener(`click`, filterButtonClickhandler);
+filterClose?.addEventListener(`click`, filterCloseClickhandler);
 
 // localStorage handler
 
@@ -139,7 +167,6 @@ sliderButtonFwrd?.addEventListener(`click`, sliderButtonFwrdClickHandler);
 
 // Login handler
 
-const body = document.body;
 const loginLink = document.querySelector(`.login-link-js`);
 const login = document.querySelector(`.login`);
 const loginClose = document.querySelector(`.login__close`);
@@ -150,7 +177,7 @@ const loginToggleClickHandler = (evt) => {
   login?.classList.toggle(`login--opened`);
 };
 
-const documentEscKeydownHandler = (evt) => {
+const loginEscKeydownHandler = (evt) => {
   if (evt.key === `Escape`) {
     loginToggleClickHandler(evt);
   }
@@ -158,14 +185,13 @@ const documentEscKeydownHandler = (evt) => {
 
 const loginLinkClickHandler = (evt) => {
   loginToggleClickHandler(evt);
-  document.addEventListener(`keydown`, documentEscKeydownHandler);
+  document.addEventListener(`keydown`, loginEscKeydownHandler);
 };
 
 const loginCloseClickHandler = (evt) => {
   loginToggleClickHandler(evt);
-  document.removeEventListener(`keydown`, documentEscKeydownHandler);
+  document.removeEventListener(`keydown`, loginEscKeydownHandler);
 };
 
 loginLink?.addEventListener(`click`, loginLinkClickHandler);
 loginClose?.addEventListener(`click`, loginCloseClickHandler);
-

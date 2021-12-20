@@ -1,6 +1,18 @@
-.filter {
+.filter__container {
   @media (max-width: $desktop) {
     display: none;
+  }
+}
+
+.filter--opened .filter__container {
+  @media (max-width: $desktop) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -9,25 +21,26 @@
 }
 
 .filter--opened .filter__close {
-  display: none;
-
   @media (max-width: $desktop) {
-    position: absolute;
-    top: -12px;
-    right: -16px;
+    position: fixed;
     display: block;
+    align-self: end;
+    margin-top: -17px;
+    margin-right: -30px;
+    margin-left: auto;
     width: 34px;
     height: 34px;
     padding: 0;
     background-color: $background-black;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
 
     &::before {
       content: "";
       position: absolute;
       top: 10px;
-      right: 9px;
+      right: 10px;
       width: 14px;
       height: 14px;
       background-image: url("../img/icon-close.svg");
@@ -40,8 +53,38 @@
     right: 12px;
 
     &::before {
-      right: 12px;
+      right: 10px;
     }
+  }
+}
+
+.filter--opened .filter__form {
+  display: none;
+
+  @media (max-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    max-width: 422px;
+    height: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-bottom: 90px;
+    margin-right: auto;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: $basic-background;
+    box-shadow: 0 5px 32px $light-gray;
+  }
+
+  @media (max-width: $tablet) {
+    min-width: 270px;
+    margin-bottom: 47px;
   }
 }
 
@@ -138,14 +181,15 @@ summary::-webkit-details-marker {
     right: 23px;
     background-size: 19px 17px;
     transform: rotate(180deg);
+    cursor: pointer;
   }
 
   @media (max-width: $desktop) {
     &::before {
-      top: 45px;
-      right: 37px;
       width: 28px;
       height: 14px;
+      top: 43px;
+      right: 24px;
       background-size: 28px 14px;
     }
   }
@@ -153,7 +197,7 @@ summary::-webkit-details-marker {
   @media (max-width: $tablet) {
     &::before {
       top: 35px;
-      right: 24px;
+      right: 35px;
       width: 21px;
       height: 13px;
       background-size: 21px 13px;
@@ -283,4 +327,222 @@ summary::-webkit-details-marker {
 
 .filter__item input:focus-visible + label {
   outline: 1px auto;
+}
+
+.filter__range {
+  width: 200px;
+  padding-bottom: 11px;
+
+  @media (max-width: $desktop) {
+    width: 100%;
+    padding-bottom: 29px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 90%;
+    padding-bottom: 21px;
+  }
+}
+
+.filter__range-controls {
+  position: relative;
+  margin-bottom: 7px;
+  padding-top: 0;
+  padding-left: 22px;
+
+  @media (max-width: $desktop) {
+    padding-left: 34px;
+    padding-right: 84px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 10px;
+    margin-bottom: 9px;
+  }
+}
+
+.filter__range-controls .filter__scale {
+  height: 2px;
+  background-color: $pearl-white;
+}
+
+.filter__range-controls .filter__bar {
+  width: 101px;
+  margin-left: 55px;
+  height: 2px;
+  background-color: $light-gray-red;
+
+  @media (max-width: $desktop) {
+    width: 181px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 122px;
+    margin-left: 38px;
+  }
+}
+
+.filter__bar {
+  width: 30%;
+  margin-left: 35px;
+  background-color: $pearl-white;
+}
+
+.filter__toggle {
+  position: absolute;
+  top: -6;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  background-color: $light-gray-red;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+
+  @media (max-width: $desktop) {
+    top: 30px;
+  }
+
+  @media (max-width: $tablet) {
+    top: 27px;
+  }
+}
+
+.filter__toggle-min {
+  top: -7px;
+  left: 68px;
+
+  @media (max-width: $desktop) {
+    left: 75px;
+    width: 17px;
+    height: 17px;
+  }
+
+  @media (max-width: $tablet) {
+    top: 4px;
+    left: 54px;
+  }
+}
+
+.filter__toggle-max {
+  top: -7px;
+  left: 173px;
+
+  @media (max-width: $desktop) {
+    left: 254px;
+  }
+
+  @media (max-width: $tablet) {
+    top: 4px;
+    left: 191px;
+  }
+}
+
+.filter__price-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 157px;
+  margin: 0 auto;
+  margin-left: 50px;
+  font-weight: 500;
+
+  @media (max-width: $desktop) {
+    width: 226px;
+    margin-left: 59px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 187px;
+    margin-left: 38px;
+  }
+}
+
+.filter__price-controls input {
+  width: 50px;
+  height: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  border: none;
+
+  @media (max-width: $desktop) {
+    font-size: 16px;
+  }
+}
+
+.filter__btn {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  min-height: 68px;
+  margin-bottom: 50px;
+
+  @media (max-width: $desktop) {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.filter__btn--open {
+  display: none;
+
+  @media (max-width: $desktop) {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 5px;
+    background-color: $light-gray-red;
+    border: none;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.filter__btn--apply {
+  margin-bottom: 0;
+  background: $light-gray-red;
+  border: 1px solid $light-gray-red;
+}
+
+.filter__btn--secondary {
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 1px solid $basic-color;
+  color: $basic-color;
+}
+
+.filter--opened .filter__btn {
+  @media (max-width: $desktop) {
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-right: 28px;
+    padding-left: 29px;
+  }
+}
+
+.filter--opened .filter__block {
+  @media (max-width: $desktop) {
+    margin-bottom: 41px;
+    border: none;
+    border-bottom: 1px solid $light-gray-red;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 28px;
+    border: none;
+  }
 }

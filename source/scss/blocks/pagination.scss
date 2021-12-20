@@ -9,16 +9,12 @@
 .pagination a {
   cursor: pointer;
 
-  &:active {
-    opacity: 1;
-  }
-
   &:hover {
     opacity: 0.5;
   }
 
-  &:focus-visible {
-    outline: 1px auto;
+  &:active {
+    opacity: 1;
   }
 }
 
@@ -81,9 +77,5 @@
 
   &:active {
     opacity: 1;
-  }
-
-  &:focus-visible {
-    outline: 1px auto;
   }
 }

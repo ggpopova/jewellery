@@ -1,5 +1,9 @@
 .modalfull-body--opened-modal {
-  // position: fixed;
   height: auto;
   overflow: auto;
+}
+
+.modalfull-body--opened {
+  overflow: hidden;
+  background-color: $white-antique;
 }

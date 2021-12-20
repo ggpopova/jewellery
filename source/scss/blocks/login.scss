@@ -196,16 +196,12 @@ input[type="email"],
 input[type="password"] {
   cursor: pointer;
 
-  &:active {
-    opacity: 1;
-  }
-
   &:hover {
     opacity: 0.5;
   }
 
-  &:focus-visible {
-    outline: 1px auto;
+  &:active {
+    opacity: 1;
   }
 }
 
@@ -219,16 +215,12 @@ input[type="password"] {
   color: $gray-crayola;
   cursor: pointer;
 
-  &:active {
-    opacity: 1;
-  }
-
   &:hover {
     opacity: 0.5;
   }
 
-  &:focus-visible {
-    outline: 1px auto;
+  &:active {
+    opacity: 1;
   }
 
   @media (max-width: $tablet) {
@@ -244,16 +236,12 @@ input[type="password"] {
   color: $basic-color;
   cursor: pointer;
 
-  &:active {
-    opacity: 1;
-  }
-
   &:hover {
     opacity: 0.5;
   }
 
-  &:focus-visible {
-    outline: 1px auto;
+  &:active {
+    opacity: 1;
   }
 }
 
@@ -269,7 +257,3 @@ input[type="password"] {
 .login--close .login {
   display: none;
 }
-
-// .login--close .header-z-index {
-//   z-index: 3;
-// }
