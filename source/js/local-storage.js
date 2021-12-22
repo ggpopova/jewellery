@@ -1,5 +1,5 @@
 "use strict";
-
+(() => {
 // localStorage handler
 
 const emailInput = document.querySelector(`#email`);
@@ -14,3 +14,5 @@ if (localStorage.getItem(`email`) && emailInput) {
 }
 
 emailInput?.addEventListener(`change`, emailInputChangeHandler);
+
+})();

@@ -1,4 +1,5 @@
 "use strict";
+(() => {
 // Login handler
 
 const loginLink = document.querySelector(`.login-link-js`);
@@ -29,3 +30,5 @@ const loginCloseClickHandler = (evt) => {
 
 loginLink?.addEventListener(`click`, loginLinkClickHandler);
 loginClose?.addEventListener(`click`, loginCloseClickHandler);
+
+})();

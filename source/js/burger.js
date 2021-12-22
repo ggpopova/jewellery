@@ -1,5 +1,5 @@
 "use strict";
-
+(() => {
 // Menu behaviour
 
 const body = document.body;
@@ -12,3 +12,5 @@ const burgerButtonClickHandler = () => {
 };
 
 burgerButton?.addEventListener(`click`, burgerButtonClickHandler);
+
+})();

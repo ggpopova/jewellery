@@ -1,11 +1,11 @@
 "use strict";
-
+(() => {
 // Filter behaviour
 
 const filterButton = document.querySelector(`.filter__btn--open`);
 const filterClose = document.querySelector(`.filter__close`);
 const filter = document.querySelector(`.filter`);
-const filterWrapper = document.querySelector(`.filter--opened`);
+const filterWrapper = document.querySelector(`.filter__container`);
 
 const filterToogleClickhandler = (evt) => {
   evt.preventDefault();
@@ -39,3 +39,5 @@ const filterWrapperClickHandler = (evt) => {
 
 filterButton?.addEventListener(`click`, filterButtonClickhandler);
 filterClose?.addEventListener(`click`, filterCloseClickhandler);
+
+})();

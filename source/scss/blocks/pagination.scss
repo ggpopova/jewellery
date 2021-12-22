@@ -46,6 +46,7 @@
 
 .pagination__list--desk {
   @media (max-width: $desktop) {
+    display: none;
     margin-right: 0;
   }
 }
@@ -57,7 +58,7 @@
     flex-wrap: wrap;
     justify-items: center;
     margin-right: auto;
-    margin-left: 0;
+    margin-left: auto;
   }
 }
 
@@ -70,6 +71,7 @@
 
 .pagination__item a {
   padding: 7px;
+  color: $gray-crayola;
 
   &:hover {
     color: $gray-crayola;
@@ -78,4 +80,8 @@
   &:active {
     opacity: 1;
   }
+}
+
+.pagination__item--active a {
+  color: $basic-color;
 }

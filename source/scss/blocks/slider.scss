@@ -16,11 +16,16 @@
 
 .slider__list {
   @include list-style;
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  flex-direction: row;
   align-items: start;
   column-gap: 30px;
   overflow: auto;
+  scrollbar-width: none;
+}
+
+.slider__list::-webkit-scrollbar {
+  width: 0;
 }
 
 .slider__button {
@@ -78,17 +83,14 @@
 }
 
 .slider__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 270px;
+  flex: 0 0 23.08%;
 
   @media (max-width: $desktop) {
-    min-width: 324px;
+    flex: 0 0 50%;
   }
 
   @media (max-width: $tablet) {
-    min-width: 130px;
+    flex: 0 0 45%;
   }
 }
 
