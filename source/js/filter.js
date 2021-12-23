@@ -2,6 +2,7 @@
 (() => {
 // Filter behaviour
 
+const body = document.body;
 const filterButton = document.querySelector(`.filter__btn--open`);
 const filterClose = document.querySelector(`.filter__close`);
 const filter = document.querySelector(`.filter`);

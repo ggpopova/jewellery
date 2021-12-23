@@ -1,0 +1,48 @@
+.user-link__item {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.user-link__item--cart-link {
+  margin-left: 20px;
+
+  @media (max-width: $tablet) {
+    margin-left: 0;
+  }
+}
+
+.user-link__item--cart-link svg {
+  display: none;
+  color: $basic-background;
+  stroke: $basic-color;
+
+  @media (max-width: $desktop) {
+    display: block;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 0;
+  }
+}
+
+.user-link__item--login-link,
+.user-link__item--cart-link div {
+  @media (max-width: $desktop) {
+    display: none;
+  }
+}
+
+.user-link__item--login-link {
+  margin-right: 14px;
+
+  @media (max-width: $desktop) {
+    margin-right: 0;
+  }
+}

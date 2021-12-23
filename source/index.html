@@ -19,78 +19,78 @@
 <body class="modalfull-body">
   <header class="header-cover">
     <div class="header">
-    <div class="header__wrapper">
-      <div class="header__block container">
-        <button class="header__btn burger-btn" type="button" aria-label="menu button">
-        </button>
+      <div class="header__wrapper">
+        <div class="header__block container">
+          <button class="header__btn burger-btn" type="button" aria-label="menu button">
+          </button>
+          <form class="header__search search-form" action="http://echo.htmlacademy.ru" method="post">
+            <label for="usersearch">
+              <svg width="14" height="14" viewBox="0 0 14 14">
+                <use xlink:href="img/sprite.svg#icon-magnifier"></use>
+              </svg>
+              <input type="search" name="search" id="usersearch" placeholder="Type here to search">
+            </label>
+          </form>
+          <a class="header__logo" href="index.html">
+            <svg width="66" height="66" viewBox="0 0 66 66">
+              <use xlink:href="img/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
+          <div class="header__link-wrapper user-link">
+            <a class="user-link__item user-link__item--login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
+            <a class="user-link__item user-link__item--cart-link" href="#" aria-label="cart link">
+              <div>
+                Cart&nbsp;
+                <span>0</span>
+              </div>
+              <svg width="20" height="18" viewBox="0 0 20 18">
+                <use xlink:href="img/sprite.svg#icon-email"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="header__navbar navbar navbar--menu  container">
         <form class="header__search search-form" action="http://echo.htmlacademy.ru" method="post">
-          <label for="usersearch">
+          <label for="mysearch">
             <svg width="14" height="14" viewBox="0 0 14 14">
               <use xlink:href="img/sprite.svg#icon-magnifier"></use>
             </svg>
-            <input type="search" name="search" id="usersearch" placeholder="Type here to search">
+            <input type="search" name="search" id="mysearch" placeholder="">
           </label>
         </form>
-        <a class="header__logo" href="index.html">
-          <svg width="66" height="66" viewBox="0 0 66 66">
-            <use xlink:href="img/sprite.svg#icon-logo"></use>
-          </svg>
-        </a>
-        <div class="header__link-wrapper user-link">
-          <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
-          <a class="user-link__item cart-link cart-link--menu" href="#" aria-label="cart link">
-            <div>
-              Cart&nbsp;
-              <span>0</span>
-            </div>
-            <svg width="20" height="18" viewBox="0 0 20 18">
-              <use xlink:href="img/sprite.svg#icon-email"></use>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-    <nav class="header__navbar navbar navbar--menu  container">
-      <form class="header__search search-form" action="http://echo.htmlacademy.ru" method="post">
-        <label for="mysearch">
-          <svg width="14" height="14" viewBox="0 0 14 14">
-            <use xlink:href="img/sprite.svg#icon-magnifier"></use>
-          </svg>
-          <input type="search" name="search" id="mysearch" placeholder="">
-        </label>
-      </form>
-      <ul class="navbar__list nav-list">
-        <li class="nav-list__item">
-          <a href="#new">What’s new</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="catalog.html">Chokers</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="catalog.html">Necklaces</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="catalog.html">Rings</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="catalog.html">Earrings</a>
-        </li>
-      </ul>
-      <ul class="navbar__list expanded-nav-list">
-        <li class="expanded-nav-list__item">
-          <a href="catalog.html">About CH</a>
-        </li>
-        <li class="expanded-nav-list__item">
-          <a href="catalog.html">Stores&nbsp;&#38;&nbsp;Hours</a>
-        </li>
-        <li class="expanded-nav-list__item">
-          <a href="catalog.html">Contact Us</a>
-        </li>
-        <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
-          <a href="login.html" target="_blank" aria-label="login form link">Login</a>
-        </li>
-      </ul>
-    </nav>
+        <ul class="navbar__list nav-list">
+          <li class="nav-list__item">
+            <a href="#new">What’s new</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Chokers</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Necklaces</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Rings</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Earrings</a>
+          </li>
+        </ul>
+        <ul class="navbar__list expanded-nav-list">
+          <li class="expanded-nav-list__item">
+            <a href="catalog.html">About CH</a>
+          </li>
+          <li class="expanded-nav-list__item">
+            <a href="catalog.html">Stores&nbsp;&#38;&nbsp;Hours</a>
+          </li>
+          <li class="expanded-nav-list__item">
+            <a href="catalog.html">Contact Us</a>
+          </li>
+          <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
+            <a href="login.html" target="_blank" aria-label="login form link">Login</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -139,7 +139,7 @@
               <picture>
                 <source type="image/webp" srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
-                <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x 2x" alt="Изящное золотое ожерелье" width="270" height="284">
+                <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x.jpg 2x" alt="Изящное золотое ожерелье" width="270" height="284">
               </picture>
               <h3>Gold chain</h3>
               <p>&#36; 215</p>
@@ -148,7 +148,7 @@
           <li class="slider__item">
             <a class="slider__link" href="#">
               <picture>
-                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
                 <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
               </picture>
@@ -159,7 +159,7 @@
           <li class="slider__item slider__item--hidden">
             <a class="slider__link" href="#">
               <picture>
-                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
                 <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
               </picture>
@@ -183,7 +183,7 @@
               <picture>
                 <source type="image/webp" srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
-                <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x 2x" alt="Изящное золотое ожерелье" width="270" height="284">
+                <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x.jpg 2x" alt="Изящное золотое ожерелье" width="270" height="284">
               </picture>
               <h3>Gold chain</h3>
               <p>&#36; 215</p>
@@ -203,7 +203,7 @@
           <li class="slider__item slider__item--hidden">
             <a class="slider__link" href="#">
               <picture>
-                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
                 <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
               </picture>
@@ -226,7 +226,7 @@
             <a class="slider__link" href="#">
               <picture>
                 <!-- 1х: 270px; 2x: 540px -->
-                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings-necklace@2x.webp 2x">
+                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
                 <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" alt="Серьги Галактики" width="270" height="284">
               </picture>
@@ -239,7 +239,7 @@
               <picture>
                 <source type="image/webp" srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
-                <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x 2x" alt="Изящное золотое ожерелье" width="270" height="284">
+                <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x.jpg 2x" alt="Изящное золотое ожерелье" width="270" height="284">
               </picture>
               <h3>Gold chain</h3>
               <p>&#36; 215</p>

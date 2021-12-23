@@ -12,14 +12,14 @@
     <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body class="modalfull-body">
     <header class="header-cover">
-      <div class="header">
+      <<div class="header">
         <div class="header__wrapper">
           <div class="header__block container">
             <button class="header__btn burger-btn" type="button" aria-label="menu button">
@@ -32,14 +32,14 @@
                 <input type="search" name="search" id="usersearch" placeholder="Type here to search">
               </label>
             </form>
-            <a class="header__logo" href="index.html">
+            <a class="header__logo header__logo--catalog" href="index.html">
               <svg width="66" height="66" viewBox="0 0 66 66">
                 <use xlink:href="img/sprite.svg#icon-logo"></use>
               </svg>
             </a>
             <div class="header__link-wrapper user-link">
-              <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
-              <a class="user-link__item cart-link cart-link--menu" href="#" aria-label="cart link">
+              <a class="user-link__item user-link__item--login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
+              <a class="user-link__item user-link__item--cart-link" href="#" aria-label="cart link">
                 <div>
                   Cart&nbsp;
                   <span>0</span>
@@ -92,7 +92,7 @@
             </li>
           </ul>
         </nav>
-        </div>
+      </div>
     </header>
 
     <main class="page-main">
@@ -351,7 +351,7 @@
     </main>
 
     <footer class="footer">
-      <section class="footer-form footer-catalog container">
+      <section class="footer-form footer-form--catalog container">
         <div class="footer-form__block">
           <h2>The good stuff in your inbox</h2>
           <p>News and updates from CH. No spam, we promise.</p>

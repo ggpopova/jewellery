@@ -2,6 +2,7 @@
 (() => {
 // Login handler
 
+const body = document.body;
 const loginLink = document.querySelector(`.login-link-js`);
 const login = document.querySelector(`.login`);
 const loginClose = document.querySelector(`.login__close`);

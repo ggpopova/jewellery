@@ -28,6 +28,27 @@
   }
 }
 
+.footer-form--catalog {
+  position: relative;
+  padding-bottom: 58px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -130px;
+    width: 100%;
+    outline: 1px solid $smoky-white;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 57px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .footer-form__block h2,
 .footer-form__block p {
   margin: 0 auto;

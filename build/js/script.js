@@ -1,5 +1,5 @@
 "use strict";
-(() => { 
+(() => {
 // Menu behaviour
 
 const body = document.body;
@@ -19,6 +19,7 @@ burgerButton?.addEventListener(`click`, burgerButtonClickHandler);
 (() => {
 // Filter behaviour
 
+const body = document.body;
 const filterButton = document.querySelector(`.filter__btn--open`);
 const filterClose = document.querySelector(`.filter__close`);
 const filter = document.querySelector(`.filter`);
@@ -82,6 +83,7 @@ emailInput?.addEventListener(`change`, emailInputChangeHandler);
 (() => {
 // Login handler
 
+const body = document.body;
 const loginLink = document.querySelector(`.login-link-js`);
 const login = document.querySelector(`.login`);
 const loginClose = document.querySelector(`.login__close`);
@@ -312,7 +314,7 @@ const windowResizeHandler = () => {
   const lastTabletSlideShown = currentTabletSliderPage * TABLET_SLIDES_PER_PAGE;
   const firstTabletSlideShown = lastTabletSlideShown - TABLET_SLIDES_PER_PAGE;
 
-  sliderItems.forEach((slide, slideIndex) => {
+  sliderItems?.forEach((slide, slideIndex) => {
       if (window.innerWidth > 1024) {
           if (slideIndex >= firstDesktopSlideShown && slideIndex <= lastDesktopSlideShown - 1) {
               slide.classList.remove(`slider__item--hidden`);

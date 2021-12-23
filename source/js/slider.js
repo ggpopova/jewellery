@@ -197,7 +197,7 @@ const windowResizeHandler = () => {
   const lastTabletSlideShown = currentTabletSliderPage * TABLET_SLIDES_PER_PAGE;
   const firstTabletSlideShown = lastTabletSlideShown - TABLET_SLIDES_PER_PAGE;
 
-  sliderItems.forEach((slide, slideIndex) => {
+  sliderItems?.forEach((slide, slideIndex) => {
       if (window.innerWidth > 1024) {
           if (slideIndex >= firstDesktopSlideShown && slideIndex <= lastDesktopSlideShown - 1) {
               slide.classList.remove(`slider__item--hidden`);
