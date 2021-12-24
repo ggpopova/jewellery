@@ -22,6 +22,10 @@
   column-gap: 30px;
   overflow: auto;
   scrollbar-width: none;
+
+  @media (max-width: $desktop-max) {
+    column-gap: 20px;
+  }
 }
 
 .slider__list::-webkit-scrollbar {

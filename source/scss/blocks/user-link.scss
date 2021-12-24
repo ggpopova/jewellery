@@ -20,8 +20,8 @@
 
 .user-link__item--cart-link svg {
   display: none;
-  color: $basic-background;
   stroke: $basic-color;
+  color: transparent;
 
   @media (max-width: $desktop) {
     display: block;
@@ -37,6 +37,11 @@
   @media (max-width: $desktop) {
     display: none;
   }
+}
+
+.header--opened .user-link__item--cart-link svg {
+  stroke: $basic-background;
+  color: transparent;
 }
 
 .user-link__item--login-link {
