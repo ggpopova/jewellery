@@ -15,6 +15,8 @@
   top: 50%;
   left: 50%;
   display: none;
+  min-width: 270px;
+  max-width: 430px;
   transform: translate(-50%, -50%);
   background: $pearl-white;
   box-shadow: 0 5px 32px $forest-wolf;
@@ -144,6 +146,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .login__form input,
@@ -162,6 +165,7 @@
 }
 
 .login__form label {
+  width: 100%;
   margin-bottom: 35px;
 
   @media (max-width: $desktop) {
@@ -254,4 +258,55 @@ input[type="password"] {
 
 .login--close .login {
   display: none;
+}
+
+.login__list {
+  @include list-style;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 510px;
+  padding: 0;
+
+  @media (max-width: $desktop) {
+    flex-direction: column;
+    align-items: baseline;
+    min-width: 270px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.login__item {
+  @media (max-width: $desktop) {
+    margin-bottom: 19px;
+  }
+}
+
+.login__item a {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (max-width: $desktop) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.login__item:last-child {
+  margin-bottom: 0;
 }

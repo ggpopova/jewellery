@@ -108,18 +108,28 @@
 .blog__item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 300px;
+  min-height: 300px;
 
   @media (max-width: $tablet) {
     grid-template-columns: 1fr;
-    grid-template-rows: 256px 256px;
   }
 }
 
 .blog__img img {
+  display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
+
+  @media (max-width: $tablet) {
+    max-height: 256px;
+  }
+}
+
+.blog__text-wrapper {
+  @media (max-width: $tablet) {
+    min-height: 256px;
+  }
 }
 
 .blog__item--flow .blog__text-wrapper {
