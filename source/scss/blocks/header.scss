@@ -21,6 +21,7 @@
     height: 100%;
     margin-bottom: 25px;
     background-color: $light-gray-red;
+    overflow-x: auto;
   }
 
   @media (max-width: $tablet) {
@@ -83,8 +84,12 @@
   align-items: center;
 }
 
+.header--opened .header__logo {
+  pointer-events: none;
+}
+
 .header__logo svg {
-  stroke:  $stroke-logo;
+  stroke: $light-gray-red;
 }
 
 .header__logo--catalog svg {
@@ -103,7 +108,9 @@
 
 .header--opened .header__logo svg {
   color: $basic-background;
-  
+  stroke: $basic-background;
+
+
   &:hover {
     opacity: 0.5;
     color: $basic-background;

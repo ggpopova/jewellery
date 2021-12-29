@@ -6,7 +6,7 @@
 
 .filter--opened .filter__container {
   @media (max-width: $desktop) {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;

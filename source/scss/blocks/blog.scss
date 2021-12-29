@@ -127,6 +127,15 @@
 }
 
 .blog__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: $pearl-white;
+  text-align: center;
+  overflow: auto;
+
   @media (max-width: $tablet) {
     min-height: 256px;
   }
@@ -136,17 +145,6 @@
   @media (max-width: $tablet) {
     grid-row: 2;
   }
-}
-
-.blog__text-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  background-color: $pearl-white;
-  text-align: center;
-  overflow: auto;
 }
 
 .blog__block--list .blog__text-wrapper {

@@ -23,47 +23,75 @@ loginLinkMobile?.addEventListener(`click`, loginLinkMobileClickHandler);
 
 "use strict";
 (() => {
-// Filter behaviour
+  // Filter behaviour
 
-const body = document.body;
-const filterButton = document.querySelector(`.filter__btn--open`);
-const filterClose = document.querySelector(`.filter__close`);
-const filter = document.querySelector(`.filter`);
-const filterWrapper = document.querySelector(`.filter__container`);
+  const keyCodes = {
+    ESCAPE: 27,
+    TAB: 9
+  };
 
-const filterToogleClickhandler = (evt) => {
-  evt.preventDefault();
-  body.classList.toggle(`modalfull-body--opened`);
-  filter?.classList.toggle(`filter--opened`);
-};
+  const body = document.body;
+  const filterButton = document.querySelector(`.filter__btn--open`);
+  const filterClose = document.querySelector(`.filter__close`);
+  const filter = document.querySelector(`.filter`);
+  const filterWrapper = document.querySelector(`.filter__container`);
 
-const filterEscKeydownHandler = (evt) => {
-  if (evt.key === `Escape`) {
+  const filterToogleClickhandler = (evt) => {
+    evt.preventDefault();
+    body.classList.toggle(`modalfull-body--opened`);
+    filter?.classList.toggle(`filter--opened`);
+  };
+
+  const filterButtonClickhandler = (evt) => {
     filterToogleClickhandler(evt);
-  }
-};
+    document.addEventListener(`keydown`, handlePopupKeydown);
+    filterWrapper.addEventListener(`click`, filterWrapperClickHandler);
+  };
 
-const filterButtonClickhandler = (evt) => {
-  filterToogleClickhandler(evt);
-  document.addEventListener(`keydown`, filterEscKeydownHandler);
-  filterWrapper.addEventListener(`click`, filterWrapperClickHandler);
-};
+  const filterCloseClickhandler = (evt) => {
+    filterToogleClickhandler(evt);
+    document.removeEventListener(`keydown`, handlePopupKeydown);
+    filterWrapper.removeEventListener(`click`, filterWrapperClickHandler);
+  };
 
-const filterCloseClickhandler = (evt) => {
-  filterToogleClickhandler(evt);
-  document.removeEventListener(`keydown`, filterEscKeydownHandler);
-  filterWrapper.removeEventListener(`click`, filterWrapperClickHandler);
-};
+  const filterWrapperClickHandler = (evt) => {
+    if (evt.target === filterWrapper) {
+      filterCloseClickhandler(evt);
+    }
+  };
 
-const filterWrapperClickHandler = (evt) => {
-  if (evt.target === filterWrapper) {
-    filterCloseClickhandler(evt);
-  }
-};
+  const handlePopupTabOrShiftAndTabKeydown = (evt) => {
+    if (evt.keyCode === keyCodes.TAB) {
+      const focusablePopupElements = filter.querySelectorAll(`a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select`);
 
-filterButton?.addEventListener(`click`, filterButtonClickhandler);
-filterClose?.addEventListener(`click`, filterCloseClickhandler);
+      const firstElement = focusablePopupElements[0];
+      const lastElement = focusablePopupElements[focusablePopupElements.length - 1];
 
+      if (document.activeElement === firstElement && evt.shiftKey) {
+        evt.preventDefault();
+        lastElement.focus();
+      } else if (document.activeElement === lastElement && !evt.shiftKey) {
+        evt.preventDefault();
+        firstElement.focus();
+      }
+    }
+  };
+
+  const keydownHandlers = new Map([
+    [keyCodes.ESCAPE, filterCloseClickhandler],
+    [keyCodes.TAB, handlePopupTabOrShiftAndTabKeydown]
+  ]);
+
+  const handlePopupKeydown = (evt) => {
+    const handlePopupKeydownProper = keydownHandlers.get(evt.keyCode);
+
+    if (handlePopupKeydownProper) {
+      handlePopupKeydownProper(evt);
+    }
+  };
+
+  filterButton?.addEventListener(`click`, filterButtonClickhandler);
+  filterClose?.addEventListener(`click`, filterCloseClickhandler);
 })();
 
 "use strict";
@@ -87,52 +115,83 @@ emailInput?.addEventListener(`change`, emailInputChangeHandler);
 
 "use strict";
 (() => {
-// Login handler
+  // Login handler
 
-const body = document.body;
-const loginLink = document.querySelector(`.login-link-js`);
-const loginLinkMobile  = document.querySelector(`.expanded-nav-list__item--login a`);
-const login = document.querySelector(`.login`);
-const loginClose = document.querySelector(`.login__close`);
+  const keyCodes = {
+    ESCAPE: 27,
+    TAB: 9
+  };
 
-const loginToggleClickHandler = (evt) => {
-  evt.preventDefault();
-  body.classList.toggle(`modalfull-body--opened-modal`);
-  login?.classList.toggle(`login--opened`);
-};
+  const body = document.body;
+  const loginLink = document.querySelector(`.login-link-js`);
+  const loginLinkMobile  = document.querySelector(`.expanded-nav-list__item--login a`);
+  const login = document.querySelector(`.login`);
+  const loginClose = document.querySelector(`.login__close`);
 
-const loginEscKeydownHandler = (evt) => {
-  if (evt.key === `Escape`) {
+  const loginToggleClickHandler = (evt) => {
+    evt.preventDefault();
+    body.classList.toggle(`modalfull-body--opened-modal`);
+    login?.classList.toggle(`login--opened`);
+  };
+
+  const loginLinkClickHandler = (evt) => {
     loginToggleClickHandler(evt);
-  }
-};
+    login.querySelector(`a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select`).focus();
+    document.addEventListener(`keydown`, handlePopupKeydown);
+  };
 
-const loginLinkClickHandler = (evt) => {
-  loginToggleClickHandler(evt);
-  document.addEventListener(`keydown`, loginEscKeydownHandler);
-};
+  const loginLinkMobileClickHandler = (evt) => {
+    loginToggleClickHandler(evt);
+    login.querySelector(`a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select`).focus();
+    document.addEventListener(`keydown`, handlePopupKeydown);
+  };
 
-const loginLinkMobileClickHandler = (evt) => {
-  loginToggleClickHandler(evt);
-  document.addEventListener(`keydown`, loginEscKeydownHandler);
-};
+  const loginCloseClickHandler = (evt) => {
+    loginToggleClickHandler(evt);
+    document.removeEventListener(`keydown`, handlePopupKeydown);
+  };
 
-const loginCloseClickHandler = (evt) => {
-  loginToggleClickHandler(evt);
-  document.removeEventListener(`keydown`, loginEscKeydownHandler);
-};
+  const loginClickHandler = (evt) => {
+    if (evt.target === login) {
+      loginCloseClickHandler(evt);
+    }
+  };
 
-const loginClickHandler = (evt) => {
-  if (evt.target === login) {
-    loginCloseClickHandler(evt);
-  }
-};
+  const handlePopupTabOrShiftAndTabKeydown = (evt) => {
+    if (evt.keyCode === keyCodes.TAB) {
+      const focusablePopupElements = login.querySelectorAll(`a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select`);
 
-loginLink?.addEventListener(`click`, loginLinkClickHandler);
-loginLinkMobile?.addEventListener(`click`, loginLinkMobileClickHandler);
-login?.addEventListener(`click`, loginClickHandler);
-loginClose?.addEventListener(`click`, loginCloseClickHandler);
+      const firstElement = focusablePopupElements[0];
+      const lastElement = focusablePopupElements[focusablePopupElements.length - 1];
 
+      if (document.activeElement === firstElement && evt.shiftKey) {
+        evt.preventDefault();
+        lastElement.focus();
+      } else if (document.activeElement === lastElement && !evt.shiftKey) {
+        evt.preventDefault();
+        firstElement.focus();
+      }
+    }
+  };
+
+  const keydownHandlers = new Map([
+    [keyCodes.ESCAPE, loginCloseClickHandler],
+    [keyCodes.TAB, handlePopupTabOrShiftAndTabKeydown]
+  ]);
+
+  const handlePopupKeydown = (evt) => {
+    const handlePopupKeydownProper = keydownHandlers.get(evt.keyCode);
+
+    if (handlePopupKeydownProper) {
+      handlePopupKeydownProper(evt);
+    }
+  };
+
+  loginLink?.addEventListener(`click`, loginLinkClickHandler);
+  loginLinkMobile?.addEventListener(`click`, loginLinkMobileClickHandler);
+  login?.addEventListener(`click`, loginClickHandler);
+  loginClose?.addEventListener(`click`, loginCloseClickHandler);
+  login?.addEventListener(`focus`, loginCloseClickHandler);
 })();
 
 "use strict";
